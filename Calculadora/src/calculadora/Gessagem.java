@@ -23,6 +23,8 @@ public class Gessagem {
     private float superfícieCobertaPeloGesso; //%
     private float EspessuraDaCamada; //cm
     
+    
+    
     public Gessagem (){
         necessidadeDeGessagem = quantidadeDeGesso = 0; 
     }
@@ -153,6 +155,27 @@ public class Gessagem {
                return false; //nao necessita de gessagem
            }    
         }
+    }
+    
+    //formula para calculo de gessagem -- opcao 2 form
+    //unidades de medida -> tipocultura = opção de menu, argila = % de argila
+    public float GessagemPorTeorDeArgila (int tipocultura, float argila){
+        if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)){
+            // cultura anual
+            if (tipocultura == 1){
+
+                necessidadeDeGessagem = argila * 50;
+                return necessidadeDeGessagem;
+            }
+            //cultura perene 
+            if (tipocultura == 2){
+                necessidadeDeGessagem = argila * 75;
+                return necessidadeDeGessagem;
+            }
+        }else{
+            System.out.print("Não é necessário realizar a gessagem");
+        }
+        return 0;
     }
 
 }
