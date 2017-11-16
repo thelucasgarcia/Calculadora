@@ -13,15 +13,16 @@ public class Gessagem {
     
     
     //variaveis de form
-    private float calcio;
-    private float aluminio;
-    private float saturacaoaluminio;
-    private float profundidadeamostra;
-    private float necessidadeDeCalcario;
+   // private float calcio;
+   // private float aluminio;
+   // private float saturacaoaluminio;
+   // private float profundidadeamostra;
+    
     
     // variaveis form Necessidade de gessagem e quantidade de gesso
-    private float superfícieCobertaPeloGesso; //%
-    private float EspessuraDaCamada; //cm
+   // private float superficieCobertaPeloGesso; //%
+   // private float EspessuraDaCamada; //cm
+  //  private float necessidadeDeCalcario;
     
     
     
@@ -36,7 +37,7 @@ public class Gessagem {
     public void setNecessidadeDeGessagem(float necessidadeDeGessagem) {
         this.necessidadeDeGessagem = necessidadeDeGessagem;
     }
-
+/*
     public void setCalcio(float calcio) {
         this.calcio = calcio;
     }
@@ -57,14 +58,14 @@ public class Gessagem {
         this.necessidadeDeCalcario = necessidadeDeCalcario;
     }
 
-    public void setSuperfícieCobertaPeloGesso(float superfícieCobertaPeloGesso) {
-        this.superfícieCobertaPeloGesso = superfícieCobertaPeloGesso;
+    public void setSuperficieCobertaPeloGesso(float superfícieCobertaPeloGesso) {
+        this.superficieCobertaPeloGesso = superfícieCobertaPeloGesso;
     }
 
     public void setEspessuraDaCamada(float EspessuraDaCamada) {
         this.EspessuraDaCamada = EspessuraDaCamada;
     }
-
+*/
     public float getQuantidadeDeGesso() {
         return quantidadeDeGesso;
     }
@@ -72,7 +73,7 @@ public class Gessagem {
     public float getNecessidadeDeGessagem() {
         return necessidadeDeGessagem;
     }
-
+/*
     public float getCalcio() {
         return calcio;
     }
@@ -94,13 +95,13 @@ public class Gessagem {
     }
 
     public float getSuperfícieCobertaPeloGesso() {
-        return superfícieCobertaPeloGesso;
+        return superficieCobertaPeloGesso;
     }
 
     public float getEspessuraDaCamada() {
         return EspessuraDaCamada;
     }
-    
+*/    
     
     //profundidade do solo deve ser superior a 20cm para amostra ser valida
     //unidade de medidas -> profundidade = cm
@@ -138,7 +139,7 @@ public class Gessagem {
 
     //formula para calculo de gessagem -- opcao 1 form
     //unidade de medidas -> necessidadeDeCalcario = tonelada/hectar
-    public boolean NecessidadeDeGessagemEquantidadeDeGesso(float profundidade, float necessidadeDeCalcario, float superfícieCobertaPeloGesso, float EspessuraDaCamada) {
+    public boolean NecessidadeDeGessagemEquantidadeDeGesso(float calcio, float aluminio, float saturacaoaluminio, float profundidade, float necessidadeDeCalcario, float superficieCobertaPeloGesso, float EspessuraDaCamada) {
         //a amostra necessita ser de profundidade menor que 20cm || true = >20 = amostra invalida, false = <20 = amostra valida
         // o nivel de necessidade de calcario, é o recomendado para a camada de 0 a 20cm. 
         if (verificaprofundidadeamostra(profundidade)) {
@@ -147,7 +148,7 @@ public class Gessagem {
            if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)){
                
                necessidadeDeGessagem = (float) (necessidadeDeCalcario * 0.3); //valor sera printado no form  
-               quantidadeDeGesso = necessidadeDeGessagem * (superfícieCobertaPeloGesso/100) * (calculaEspessuraDaCamada(EspessuraDaCamada)/20); 
+               quantidadeDeGesso = necessidadeDeGessagem * (superficieCobertaPeloGesso/100) * (calculaEspessuraDaCamada(EspessuraDaCamada)/20); 
                System.out.print("Necessidade de gessagem:" +necessidadeDeGessagem);
                System.out.print("Quantidade de gesso:" + quantidadeDeGesso);
                return true;
@@ -159,7 +160,7 @@ public class Gessagem {
     
     //formula para calculo de gessagem -- opcao 2 form
     //unidades de medida -> tipocultura = opção de menu, argila = % de argila
-    public float GessagemPorTeorDeArgila (int tipocultura, float argila){
+    public float GessagemPorTeorDeArgila (float calcio, float aluminio, float saturacaoaluminio, int tipocultura, float argila){
         if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)){
             // cultura anual
             if (tipocultura == 1){
