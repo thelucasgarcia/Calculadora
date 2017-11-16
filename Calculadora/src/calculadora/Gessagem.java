@@ -24,8 +24,81 @@ public class Gessagem {
     private float EspessuraDaCamada; //cm
     
     public Gessagem (){
-    
+        necessidadeDeGessagem = quantidadeDeGesso = 0; 
     }
+    
+    public void setQuantidadeDeGesso(float quantidadeDeGesso) {
+        this.quantidadeDeGesso = quantidadeDeGesso;
+    }
+
+    public void setNecessidadeDeGessagem(float necessidadeDeGessagem) {
+        this.necessidadeDeGessagem = necessidadeDeGessagem;
+    }
+
+    public void setCalcio(float calcio) {
+        this.calcio = calcio;
+    }
+
+    public void setAluminio(float aluminio) {
+        this.aluminio = aluminio;
+    }
+
+    public void setSaturacaoaluminio(float saturacaoaluminio) {
+        this.saturacaoaluminio = saturacaoaluminio;
+    }
+
+    public void setProfundidadeamostra(float profundidadeamostra) {
+        this.profundidadeamostra = profundidadeamostra;
+    }
+
+    public void setNecessidadeDeCalcario(float necessidadeDeCalcario) {
+        this.necessidadeDeCalcario = necessidadeDeCalcario;
+    }
+
+    public void setSuperfícieCobertaPeloGesso(float superfícieCobertaPeloGesso) {
+        this.superfícieCobertaPeloGesso = superfícieCobertaPeloGesso;
+    }
+
+    public void setEspessuraDaCamada(float EspessuraDaCamada) {
+        this.EspessuraDaCamada = EspessuraDaCamada;
+    }
+
+    public float getQuantidadeDeGesso() {
+        return quantidadeDeGesso;
+    }
+
+    public float getNecessidadeDeGessagem() {
+        return necessidadeDeGessagem;
+    }
+
+    public float getCalcio() {
+        return calcio;
+    }
+
+    public float getAluminio() {
+        return aluminio;
+    }
+
+    public float getSaturacaoaluminio() {
+        return saturacaoaluminio;
+    }
+
+    public float getProfundidadeamostra() {
+        return profundidadeamostra;
+    }
+
+    public float getNecessidadeDeCalcario() {
+        return necessidadeDeCalcario;
+    }
+
+    public float getSuperfícieCobertaPeloGesso() {
+        return superfícieCobertaPeloGesso;
+    }
+
+    public float getEspessuraDaCamada() {
+        return EspessuraDaCamada;
+    }
+    
     
     //profundidade do solo deve ser superior a 20cm para amostra ser valida
     //unidade de medidas -> profundidade = cm
@@ -46,7 +119,7 @@ public class Gessagem {
             return false;
         }
     }
-    
+
     //unidade de medidas -> EspessuraDaCamada = cm
     public int calculaEspessuraDaCamada (float EspessuraDaCamada){
         int pf = 0;
