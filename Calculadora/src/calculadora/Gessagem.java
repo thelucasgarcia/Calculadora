@@ -8,6 +8,7 @@ public class Gessagem {
 
     
     //variaveis de retorno
+    private String mensagem;
     private float quantidadeDeGesso; // tonelada por hectar 
     private float necessidadeDeGessagem; // Kg por hectar a ser aplicado no solo
     
@@ -37,7 +38,12 @@ public class Gessagem {
     public void setNecessidadeDeGessagem(float necessidadeDeGessagem) {
         this.necessidadeDeGessagem = necessidadeDeGessagem;
     }
+    
+    public void setMensagem(String mensagem){
+        this.mensagem = mensagem;
+    }
 /*
+
     public void setCalcio(float calcio) {
         this.calcio = calcio;
     }
@@ -72,6 +78,10 @@ public class Gessagem {
 
     public float getNecessidadeDeGessagem() {
         return necessidadeDeGessagem;
+    }
+    
+    public String getMensagem(){
+        return mensagem;
     }
 /*
     public float getCalcio() {
@@ -125,36 +135,36 @@ public class Gessagem {
 
     //unidade de medidas -> EspessuraDaCamada = cm
     public int calculaEspessuraDaCamada (float EspessuraDaCamada){
-        int pf = 0;
         if ((EspessuraDaCamada < 40) && (EspessuraDaCamada > 20) ){
-            pf = 20;
-            return pf;
+            return 20;
+        }else{
+            if ((EspessuraDaCamada < 60) && (EspessuraDaCamada > 30) ){
+                return 30;
+            }
+            mensagem = " A espessura da camada é invalida.";
+            return 0;
         }
-        if ((EspessuraDaCamada < 60) && (EspessuraDaCamada > 30) ){
-            pf = 30;
-            return pf;
-        }
-        return 0;
     }
 
     //formula para calculo de gessagem -- opcao 1 form
     //unidade de medidas -> necessidadeDeCalcario = tonelada/hectar
     public boolean NecessidadeDeGessagemEquantidadeDeGesso(float calcio, float aluminio, float saturacaoaluminio, float profundidade, float necessidadeDeCalcario, float superficieCobertaPeloGesso, float EspessuraDaCamada) {
-        //a amostra necessita ser de profundidade menor que 20cm || true = >20 = amostra invalida, false = <20 = amostra valida
-        // o nivel de necessidade de calcario, é o recomendado para a camada de 0 a 20cm. 
+        mensagem = "";
         if (verificaprofundidadeamostra(profundidade)) {
-            return false; //amostra invalida 
-        } else {
-           if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)){
-               
+            if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)){
                necessidadeDeGessagem = (float) (necessidadeDeCalcario * 0.3); //valor sera printado no form  
                quantidadeDeGesso = necessidadeDeGessagem * (superficieCobertaPeloGesso/100) * (calculaEspessuraDaCamada(EspessuraDaCamada)/20); 
                System.out.print("Necessidade de gessagem:" +necessidadeDeGessagem);
                System.out.print("Quantidade de gesso:" + quantidadeDeGesso);
                return true;
            }else{
-               return false; //nao necessita de gessagem
-           }    
+               mensagem = "O solo não necessita de gessagem.";
+               return false;
+           }  
+        } else {
+            mensagem = "A profundidade da amostra é invalida."
+                    + "A profundidade deve ser superior a 20cm.";    
+            return false;
         }
     }
     
@@ -174,7 +184,7 @@ public class Gessagem {
                 return necessidadeDeGessagem;
             }
         }else{
-            System.out.print("Não é necessário realizar a gessagem");
+            mensagem = "O solo não necessita de gessagem.";
         }
         return 0;
     }
