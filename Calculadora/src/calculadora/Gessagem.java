@@ -146,8 +146,6 @@ public class Gessagem {
         }
     }
 
-    //formula para calculo de gessagem -- opcao 1 form
-    //unidade de medidas -> necessidadeDeCalcario = tonelada/hectar
     public boolean NecessidadeDeGessagemEquantidadeDeGesso(float calcio, float aluminio, float saturacaoaluminio, float profundidade, float necessidadeDeCalcario, float superficieCobertaPeloGesso, float EspessuraDaCamada) {
         mensagem = "";
         if (verificaprofundidadeamostra(profundidade)) {
@@ -167,9 +165,7 @@ public class Gessagem {
             return false;
         }
     }
-    
-    //formula para calculo de gessagem -- opcao 2 form
-    //unidades de medida -> tipocultura = opção de menu, argila = % de argila
+
     public float GessagemPorTeorDeArgila (float calcio, float aluminio, float saturacaoaluminio, int tipocultura, float argila){
         if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)){
             // cultura anual
