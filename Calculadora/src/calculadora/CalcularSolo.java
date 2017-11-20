@@ -17,7 +17,7 @@ public class CalcularSolo {
 }
     
     
-    public void setsomaBase(float somaBase)
+    public void setSomaBase(float somaBase)
     {
         this.SomaBase = SomaBase;
     }
