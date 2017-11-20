@@ -7,31 +7,31 @@ package calculadora;
 //e no cálculo da percentagem de saturação por Al³+.
 public class CalcularSolo {
     
-    private float SomaBase; 
+    private float somaBase; 
    
     
     //Metodo Construtor
     public CalcularSolo()
 {
-        SomaBase = 0;
+        somaBase = 0;
 }
     
     
-    public void setSomaBase(float somaBase)
+    public void setsomaBase(float somaBase)
     {
-        this.SomaBase = SomaBase;
+        this.somaBase = somaBase;
     }
     
-    public float getSomaBase()
+    public float getsomaBase()
     {
-       return SomaBase;
+       return somaBase;
     }
     
     //SB = K + Ca + Mg + (Na)
-    public float calculo(float SomaBase,float potassio, float calcio, float magnesio, float sodio)
+    public float calculo(float somaBase,float potassio, float calcio, float magnesio, float sodio)
     {
-        SomaBase = (potassio + calcio + magnesio + sodio);
-        return SomaBase;
+        somaBase = (potassio + calcio + magnesio + sodio);
+        return somaBase;
     }
     
     
