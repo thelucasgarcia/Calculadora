@@ -1,4 +1,3 @@
-
 package calculadora;
 
 import javax.swing.JOptionPane;
@@ -276,57 +275,57 @@ public class GessagemJFrame extends javax.swing.JFrame {
     private void tfCalcioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCalcioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfCalcioActionPerformed
-    
-    private boolean verificaCamposCalculoGessagem(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String necessidadeCalcario, String superficieGesso, String espessuraCamada){
-        if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (necessidadeCalcario.equals("")) || (superficieGesso.equals("")) || (espessuraCamada.equals(""))){
+
+    private boolean verificaCamposCalculoGessagem(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String necessidadeCalcario, String superficieGesso, String espessuraCamada) {
+        if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (necessidadeCalcario.equals("")) || (superficieGesso.equals("")) || (espessuraCamada.equals(""))) {
             return false;
-        }else{
+        } else {
             return true;
-        }      
+        }
     }
-    
-    private boolean verificaCamposCalculoArgila(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String porcentagemArgila){
-        if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (porcentagemArgila.equals(""))){
+
+    private boolean verificaCamposCalculoArgila(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String porcentagemArgila) {
+        if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (porcentagemArgila.equals(""))) {
             return false;
-        }else{
+        } else {
             return true;
-        }      
+        }
     }
-    
+
     private void btnCalcularNecessidadeGessagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularNecessidadeGessagemActionPerformed
-        Gessagem calculo = new Gessagem(); 
-       
-        if (verificaCamposCalculoGessagem(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfNecessidadeCalcario.getText(), tfSuperficieGesso.getText(), tfEspessuraCamada.getText())){
-            if (calculo.NecessidadeDeGessagemEquantidadeDeGesso(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), Float.parseFloat(tfProfundidade.getText()), Float.parseFloat(tfNecessidadeCalcario.getText()), Float.parseFloat(tfSuperficieGesso.getText()), Float.parseFloat(tfEspessuraCamada.getText()))){
-                if (calculo.getMensagem().equals("")){
+        Gessagem calculo = new Gessagem();
+
+        if (verificaCamposCalculoGessagem(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfNecessidadeCalcario.getText(), tfSuperficieGesso.getText(), tfEspessuraCamada.getText())) {
+            if (calculo.NecessidadeDeGessagemEquantidadeDeGesso(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), Float.parseFloat(tfProfundidade.getText()), Float.parseFloat(tfNecessidadeCalcario.getText()), Float.parseFloat(tfSuperficieGesso.getText()), Float.parseFloat(tfEspessuraCamada.getText()))) {
+                if (calculo.getMensagem().equals("")) {
                     necessidadeGesso.setText("A necessidade de gesso para esse solo é: " + calculo.getNecessidadeDeGessagem());
                     quantidadeGesso.setText("A quantidade de gesso para esse solo é: " + calculo.getQuantidadeDeGesso());
-                }else{
+                } else {
                     mensagem.setText(calculo.getMensagem());
                 }
-            }else{
+            } else {
                 mensagem.setText(calculo.getMensagem());
             }
-        }else{
+        } else {
             mensagem.setText("Os campos devem ser preenchidos corretamente");
         }
     }//GEN-LAST:event_btnCalcularNecessidadeGessagemActionPerformed
 
     private void btnCalcularPorcentagemArgilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularPorcentagemArgilaActionPerformed
         Gessagem calculo = new Gessagem();
-       
-        if (verificaCamposCalculoArgila(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(),tfPorcentagemArgila.getText())){
-            if (culturaPerene.isSelected()){
-                necessidadeGessagemArgila.setText(" Necessidade de gessagem:" + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()),2, Float.parseFloat(tfPorcentagemArgila.getText())));
+
+        if (verificaCamposCalculoArgila(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfPorcentagemArgila.getText())) {
+            if (culturaPerene.isSelected()) {
+                necessidadeGessagemArgila.setText(" Necessidade de gessagem:" + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), 2, Float.parseFloat(tfPorcentagemArgila.getText())));
             }
-            if (culturaAnual.isSelected()){
-                necessidadeGessagemArgila.setText(" Necessidade de gessagem:" + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()),1, Float.parseFloat(tfPorcentagemArgila.getText())));
+            if (culturaAnual.isSelected()) {
+                necessidadeGessagemArgila.setText(" Necessidade de gessagem:" + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), 1, Float.parseFloat(tfPorcentagemArgila.getText())));
             }
-        }else{
+        } else {
             mensagem1.setText("Os campos devem ser preenchidos corretamente");
         }
     }//GEN-LAST:event_btnCalcularPorcentagemArgilaActionPerformed
- 
+
     /**
      * @param args the command line arguments
      */
