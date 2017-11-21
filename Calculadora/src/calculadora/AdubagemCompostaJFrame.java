@@ -16,6 +16,17 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
         
     }
     
+    public boolean verificaCampo(String valorDeA, String valorDeB, String valorDeC){
+        
+        if ((valorDeA != "") || (valorDeB != "") || (valorDeC != "")){
+            return true;
+            
+        }
+        else{
+            return false;
+        }
+        
+    }
     public AdubagemCompostaJFrame() {
         initComponents();
     }
@@ -66,7 +77,7 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("CALCULO DE ADUBAGEM COMPOSTA");
+        jLabel1.setText("CALCULO ADUBAGEM COMPOSTA");
 
         jLabel2.setText("Q = A x B / C");
 
@@ -160,10 +171,18 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
         AdubagemComposta adubagem = new AdubagemComposta();
         
         
+        if (verificaCampo(valorDeA.getText(), valorDeB.getText(), valorDeC.getText())){
+            
+            
+            
+        }
+        
         resultado1 = adubagem.multiplicaAeB(quiloMistura,porcentagemElementoMistura);
         resultado2 = adubagem.divideAeBcomC(quiloMistura,resultado1,porcentagemElementoAdubo);
         
         campoResultado.setText(""+ resultado2);
+        
+        
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
