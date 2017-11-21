@@ -13,6 +13,7 @@ public class CalcularSolo {
     
     private float somaBase; 
     private float somaCTC;
+    private float calculoCTCaPH;
    
     
     //Metodo Construtor
@@ -32,6 +33,11 @@ public class CalcularSolo {
     {
         this.somaCTC = somaCTC;
     }
+    
+    public void setcalculoCTCaPH(float calculoCTCaPH)
+    {
+        this.calculoCTCaPH = calculoCTCaPH;
+    }
   
     
     //GET
@@ -44,18 +50,22 @@ public class CalcularSolo {
     {
         return somaCTC;
     }
+    public float getcalculoCTCaPH()
+    {
+        return calculoCTCaPH;
+    }
     
     
     
-   
+    //Cálculo da soma de bases (SB)
     //SB = K + Ca + Mg + (Na)
     public float calculo(float potassio, float calcio, float magnesio, float sodio)
     {
         somaBase = (potassio + calcio + magnesio + sodio);
         return somaBase;
     }
-    
-// CTC efetiva (T) = K + Ca + Mg + Al  ou (T) = SB + Al
+// Cálculo da CTC efetiva (T)
+// CTC efetiva (T) = SB + Al
     public float calculo(float somaBase, float Aluminio)
     {   
         
@@ -63,7 +73,13 @@ public class CalcularSolo {
                 return somaCTC;
     }
     
+//Cálculo da CTC a pH 7,0 (T)
+//T = SB + (H+Al)
     
-    
+    public float calculo (float somaBase, float aluminio, float hidrogenio)
+    {
+        calculoCTCaPH = somaBase + (hidrogenio + aluminio);
+        return calculoCTCaPH;
+    }
     
 }
