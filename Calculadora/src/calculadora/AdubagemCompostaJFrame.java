@@ -1,5 +1,6 @@
-
 package calculadora;
+
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -7,26 +8,26 @@ package calculadora;
  */
 public class AdubagemCompostaJFrame extends javax.swing.JFrame {
 
-    public void botaoReset(){
-        
+    public void botaoReset() {
+
         valorDeA.setText("");
         valorDeB.setText("");
         valorDeC.setText("");
         campoResultado.setText("");
-        
+
     }
-    
-    public boolean verificaCampo(String valorDeA, String valorDeB, String valorDeC){
-        
-        if ((valorDeA != "") || (valorDeB != "") || (valorDeC != "")){
-            return true;
-            
-        }
-        else{
+
+    public boolean verificaCampo(String valorDeA, String valorDeB, String valorDeC) {
+
+        if ((valorDeA.equals("")) || (valorDeB.equals("")) || (valorDeC.equals(""))) {
             return false;
+
+        } else {
+            return true;
         }
-        
+
     }
+
     public AdubagemCompostaJFrame() {
         initComponents();
     }
@@ -162,27 +163,27 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        float quiloMistura, porcentagemElementoMistura, porcentagemElementoAdubo,resultado1, resultado2;
-        
-        quiloMistura = (Float.parseFloat(valorDeA.getText()));
-        porcentagemElementoMistura =(Float.parseFloat(valorDeB.getText()));
-        porcentagemElementoAdubo = (Float.parseFloat(valorDeC.getText()));
+        float quiloMistura, porcentagemElementoMistura, porcentagemElementoAdubo, resultado1, resultado2;
 
         AdubagemComposta adubagem = new AdubagemComposta();
-        
-        
-        if (verificaCampo(valorDeA.getText(), valorDeB.getText(), valorDeC.getText())){
-            
-            
-            
+
+        if (verificaCampo(valorDeA.getText(), valorDeB.getText(), valorDeC.getText())) {
+
+            quiloMistura = (Float.parseFloat(valorDeA.getText()));
+            porcentagemElementoMistura = (Float.parseFloat(valorDeB.getText()));
+            porcentagemElementoAdubo = (Float.parseFloat(valorDeC.getText()));
+
+            resultado1 = adubagem.multiplicaAeB(quiloMistura, porcentagemElementoMistura);
+            resultado2 = adubagem.divideAeBcomC(quiloMistura, resultado1, porcentagemElementoAdubo);
+
+            campoResultado.setText("" + resultado2);
+
+        } else {
+
+            JOptionPane.showMessageDialog(null, "Todos os campos precisam ser Preenchidos!");
         }
-        
-        resultado1 = adubagem.multiplicaAeB(quiloMistura,porcentagemElementoMistura);
-        resultado2 = adubagem.divideAeBcomC(quiloMistura,resultado1,porcentagemElementoAdubo);
-        
-        campoResultado.setText(""+ resultado2);
-        
-        
+
+
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
