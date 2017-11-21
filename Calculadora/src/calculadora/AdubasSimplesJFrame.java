@@ -4,7 +4,9 @@
  * and open the template in the editor.
  */
 package calculadora;
+
 import calculadora.AdubagemSimples;
+
 /**
  *
  * @author BMorais
@@ -160,16 +162,16 @@ public class AdubasSimplesJFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-         AdubagemSimples calculo = new AdubagemSimples();
-        
-                float QuantidadeRecomendada,TeorDeNutriente,QuantidadeAplicar;
-         
-         QuantidadeRecomendada = (Float.parseFloat(jTextQR.getText()));
-         TeorDeNutriente = (Float.parseFloat(jTextTN.getText()));
-         QuantidadeAplicar= calculo.calculo(QuantidadeRecomendada,TeorDeNutriente);
-         
-         jTextQA.setText(""+QuantidadeAplicar);
+
+        AdubagemSimples calculo = new AdubagemSimples();
+
+        float QuantidadeRecomendada, TeorDeNutriente, QuantidadeAplicar;
+
+        QuantidadeRecomendada = (Float.parseFloat(jTextQR.getText()));
+        TeorDeNutriente = (Float.parseFloat(jTextTN.getText()));
+        QuantidadeAplicar = calculo.calculo(QuantidadeRecomendada, TeorDeNutriente);
+
+        jTextQA.setText("" + QuantidadeAplicar);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

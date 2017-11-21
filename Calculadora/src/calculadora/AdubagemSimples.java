@@ -10,52 +10,46 @@ package calculadora;
  * @author BMorais
  */
 class AdubagemSimples {
-    
-    
+
     private float QuantidadeRecomendada; //QR
     private float TeorDeNutriente;          //TN
     private float QuantidadeAplicar;        //QA
-    
-   public AdubagemSimples()
-   {
-      QuantidadeRecomendada = TeorDeNutriente = 0;
-       
-   } 
-    
-    public void setQuantidadeRecomendada(float QuantidadeRecomendada)
-    {
-            this.QuantidadeRecomendada = QuantidadeRecomendada;
+
+    public AdubagemSimples() {
+        QuantidadeRecomendada = TeorDeNutriente = 0;
+
     }
-    public void setTeorDeNutriente(float TeorDeNutriente)
-    {
-            this.TeorDeNutriente = TeorDeNutriente;
+
+    public void setQuantidadeRecomendada(float QuantidadeRecomendada) {
+        this.QuantidadeRecomendada = QuantidadeRecomendada;
     }
-    public void setQuantidadeAplicar(float QuantidadeAplicar)
-    {
-            this.QuantidadeAplicar = QuantidadeAplicar;
+
+    public void setTeorDeNutriente(float TeorDeNutriente) {
+        this.TeorDeNutriente = TeorDeNutriente;
     }
-  
-    public float getQuantidadeRecomendada()
-    {
-          return QuantidadeRecomendada;
+
+    public void setQuantidadeAplicar(float QuantidadeAplicar) {
+        this.QuantidadeAplicar = QuantidadeAplicar;
     }
-    public float getTeorDeNutriente()
-    {
-            return TeorDeNutriente;
+
+    public float getQuantidadeRecomendada() {
+        return QuantidadeRecomendada;
     }
-    public float getQuantidadeAplicar()
-    {
-            return QuantidadeAplicar;
+
+    public float getTeorDeNutriente() {
+        return TeorDeNutriente;
     }
-   
-    
-    public float calculo(float QuantidadeRecomendada,float TeorDeNutriente)
-    {
-        QuantidadeAplicar = (100 * QuantidadeRecomendada)/TeorDeNutriente;
-        
+
+    public float getQuantidadeAplicar() {
         return QuantidadeAplicar;
-      
-  }
+    }
+
+    public float calculo(float QuantidadeRecomendada, float TeorDeNutriente) {
+        QuantidadeAplicar = (100 * QuantidadeRecomendada) / TeorDeNutriente;
+
+        return QuantidadeAplicar;
+
+    }
 
     void setQuantidadeRecomendada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -69,6 +63,4 @@ class AdubagemSimples {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
- 
-  
 }
