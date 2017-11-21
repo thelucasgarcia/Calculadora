@@ -22,10 +22,10 @@ public class CalcularSolo {
 // Cálculo da CTC efetiva (T)
 // CTC efetiva (T) = SB + Al
 
-    public float calculoCTC(float somaBase, float Aluminio) {
+    public float calculoCTC(float somaBase, float aluminio) {
         float somaCTC;
         if (somaBase != 0) {
-            somaCTC = somaBase + Aluminio;
+            somaCTC = somaBase + aluminio;
         } else {
             mensagem = "Por favor inclua o valor da base";
         }
