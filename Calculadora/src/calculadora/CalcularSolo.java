@@ -14,6 +14,7 @@ public class CalcularSolo {
     private float somaBase; 
     private float somaCTC;
     private float calculoCTCaPH;
+    private String mensagem;
    
     
     //Metodo Construtor
@@ -67,19 +68,35 @@ public class CalcularSolo {
 // Cálculo da CTC efetiva (T)
 // CTC efetiva (T) = SB + Al
     public float calculo(float somaBase, float Aluminio)
-    {   
+    {
+        if(somaBase != 0){
+            somaCTC = somaBase + Aluminio;   
+        }     
+        else {
+            mensagem = "Por favor inclua o valor da base";
+        }         
+        return 0;
         
-        somaCTC = (somaBase + Aluminio);
-                return somaCTC;
     }
+            
+       
+               
+           
+    
     
 //Cálculo da CTC a pH 7,0 (T)
 //T = SB + (H+Al)
     
     public float calculo (float somaBase, float aluminio, float hidrogenio)
     {
+        if(somaBase != 0){
         calculoCTCaPH = somaBase + (hidrogenio + aluminio);
-        return calculoCTCaPH;
+        
+        }
+        else {
+            mensagem = "Por favor inclua o valor da base";
+        }
+        return 0;
     }
-    
 }
+  
