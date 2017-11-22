@@ -8,6 +8,7 @@ package calculadora;
 import static com.sun.javafx.application.PlatformImpl.exit;
 import static java.lang.System.exit;
 import static javafx.application.Platform.exit;
+import javax.swing.JOptionPane;
 import static jdk.nashorn.internal.objects.Global.exit;
 
 /**
@@ -25,13 +26,29 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
         resultado.setText("");
 
     }
-    public void botaoReset2(){
+
+    public void botaoReset2() {
         somaBase.setText("");
         aluminio.setText("");
         resultadoctc.setText("");
     }
 
-   
+    public boolean verificaCamposCalculoSomaBase(String potassio, String calcio, String magnesio, String sodio) {
+        if ((potassio.equals("")) || (calcio.equals("")) || (magnesio.equals("")) || (sodio.equals(""))) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    public boolean verificaCamposCalculoCTC(String aluminio, String base) {
+        if ((aluminio.equals("")) || (base.equals(""))) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     public CalcularSoloJFrame() {
         initComponents();
     }
@@ -267,33 +284,42 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         CalcularSolo calculo = new CalcularSolo();
         float retorno;
-        float k = Float.parseFloat(potassio.getText());
-        float ca = Float.parseFloat(calcio.getText());
-        float mg = Float.parseFloat(magnesio.getText());
-        float na = Float.parseFloat(sodio.getText());
-       
-        retorno = calculo.calculoBase(k, ca, mg, na);
-        
-        resultado.setText("" + retorno);
-        somaBase.setText("" + retorno);
-        
-        
-        
+
+        if (verificaCamposCalculoSomaBase(potassio.getText(), calcio.getText(), magnesio.getText(), sodio.getText())) {
+            float k = Float.parseFloat(potassio.getText());
+            float ca = Float.parseFloat(calcio.getText());
+            float mg = Float.parseFloat(magnesio.getText());
+            float na = Float.parseFloat(sodio.getText());
+
+            retorno = calculo.calculoBase(k, ca, mg, na);
+
+            resultado.setText("" + retorno);
+            somaBase.setText("" + retorno);
+        } else {
+            JOptionPane.showMessageDialog(null, "Favor preencher todos os campos");
+        }
+
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         CalcularSolo calculoctc = new CalcularSolo();
         float retorno;
-        
-        float sb = Float.parseFloat(somaBase.getText());
-        float al = Float.parseFloat(aluminio.getText());
-        retorno = calculoctc.calculoCTC(sb, al);
-        
-        if(retorno == 0){
-        resultadoctc.setText("Informe a soma base!");
-        }
-        else{
-        resultadoctc.setText("" + retorno);
+
+        if (verificaCamposCalculoCTC(somaBase.getText(), aluminio.getText())) {
+
+            float sb = Float.parseFloat(somaBase.getText());
+            float al = Float.parseFloat(aluminio.getText());
+            retorno = calculoctc.calculoCTC(sb, al);
+
+            if (retorno == 0) {
+                //resultadoctc.setText("Informe a soma base!");
+                JOptionPane.showMessageDialog(null, "Informe a soma base!");
+            } else {
+                resultadoctc.setText("" + retorno);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Favor preencher todos os campos");
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
