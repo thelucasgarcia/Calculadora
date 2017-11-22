@@ -24,12 +24,13 @@ public class CalcularSolo {
 
     public float calculoCTC(float somaBase, float aluminio) {
         float somaCTC;
-        if (somaBase != 0) {
+            if(somaBase > 0){
             somaCTC = somaBase + aluminio;
-        } else {
-            mensagem = "Por favor inclua o valor da base";
-        }
-        return 0;
+            return somaCTC;
+            }
+            else {
+                return 0;
+            }
 
     }
 
