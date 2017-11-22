@@ -387,7 +387,7 @@ public class GessagemJFrame extends javax.swing.JFrame {
         quantidadeGesso.setText("");
     }
    
-    private boolean verificaCamposCalculoGessagem(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String necessidadeCalcario, String superficieGesso, String espessuraCamada) {
+    public boolean verificaCamposCalculoGessagem(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String necessidadeCalcario, String superficieGesso, String espessuraCamada) {
         if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (necessidadeCalcario.equals("")) || (superficieGesso.equals("")) || (espessuraCamada.equals(""))) {
             return false;
         } else {
@@ -395,7 +395,7 @@ public class GessagemJFrame extends javax.swing.JFrame {
         }
     }
 
-    private boolean verificaCamposCalculoArgila(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String porcentagemArgila) {
+    public boolean verificaCamposCalculoArgila(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String porcentagemArgila) {
         if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (porcentagemArgila.equals(""))) {
             return false;
         } else {
@@ -410,6 +410,7 @@ public class GessagemJFrame extends javax.swing.JFrame {
         if (verificaCamposCalculoGessagem(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfNecessidadeCalcario.getText(), tfSuperficieGesso.getText(), tfEspessuraCamada.getText())) {
             if (calculo.NecessidadeDeGessagemEquantidadeDeGesso(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), Float.parseFloat(tfProfundidade.getText()), Float.parseFloat(tfNecessidadeCalcario.getText()), Float.parseFloat(tfSuperficieGesso.getText()), Float.parseFloat(tfEspessuraCamada.getText()))) {
                 if (calculo.getMensagem().equals("")) {
+                    cancelar();
                     necessidadeGesso.setText("A necessidade de gesso para esse solo é: " + calculo.getNecessidadeDeGessagem());
                     quantidadeGesso.setText("A quantidade de gesso para esse solo é: " + calculo.getQuantidadeDeGesso());
                 } else {
@@ -425,7 +426,6 @@ public class GessagemJFrame extends javax.swing.JFrame {
 
     private void btnCalcularPorcentagemArgilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularPorcentagemArgilaActionPerformed
         
-        cancelar();
         Gessagem calculo = new Gessagem();
 
         if (verificaCamposCalculoArgila(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfPorcentagemArgila.getText())) {

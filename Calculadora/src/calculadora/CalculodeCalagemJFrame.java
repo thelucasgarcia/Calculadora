@@ -152,7 +152,7 @@ public class CalculodeCalagemJFrame extends javax.swing.JFrame {
         float V1 = Float.parseFloat(ValorAtualDeSaturacaoDeBasesTF.getText());
         float V2 = Float.parseFloat(ValorDesejadoDeSaturacaoDeBasesTF.getText());
         float PRNT = Float.parseFloat(PoderRelativoDeNeutralizacaoTotalTF.getText());
-        retorno = calculo.NecessidadeDeCalagem(CTC,V1,V2,PRNT);
+        retorno = calculo.NecessidadeDeCalagem((int)CTC,V1,V2,PRNT);
         
         resultado.setText("" + retorno);
         
