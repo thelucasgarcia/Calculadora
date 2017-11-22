@@ -9,71 +9,29 @@ package calculadora;
 //A CTC efetiva reflete a capacidade do solo em reter cátions próximo ao valor do pH natural do solo.
 public class CalcularSolo {
 
-    private float somaBase;
-    private float somaCTC;
-    private float calculoCTCaPH;
-    private String mensagem;
-
-    //Metodo Construtor
-    public CalcularSolo() {
-        somaBase = 0;
-        somaCTC = 0;
-    }
-    //SET
-
-    public void setsomaBase(float somaBase) {
-        this.somaBase = somaBase;
-    }
-
-    public void setsomaCTC(float somaCTC) {
-        this.somaCTC = somaCTC;
-    }
-
-    public void setcalculoCTCaPH(float calculoCTCaPH) {
-        this.calculoCTCaPH = calculoCTCaPH;
-    }
-
-    //GET
-    public float getsomaBase() {
-        return somaBase;
-    }
-
-    public float getsomaCTC() {
-        return somaCTC;
-    }
-
-    public float getcalculoCTCaPH() {
-        return calculoCTCaPH;
-    }
+   private String mensagem;
+    
 
     //Cálculo da soma de bases (SB)
     //SB = K + Ca + Mg + (Na)
-    public float calculo(float potassio, float calcio, float magnesio, float sodio) {
+    public float calculoBase(float potassio, float calcio, float magnesio, float sodio) {
+        float somaBase;
         somaBase = (potassio + calcio + magnesio + sodio);
         return somaBase;
     }
 // Cálculo da CTC efetiva (T)
 // CTC efetiva (T) = SB + Al
 
-    public float calculo(float somaBase, float Aluminio) {
-        if (somaBase != 0) {
-            somaCTC = somaBase + Aluminio;
-        } else {
-            mensagem = "Por favor inclua o valor da base";
-        }
-        return 0;
+    public float calculoCTC(float somaBase, float aluminio) {
+        float somaCTC;
+            if(somaBase > 0){
+            somaCTC = somaBase + aluminio;
+            return somaCTC;
+            }
+            else {
+                return 0;
+            }
 
     }
 
-//Cálculo da CTC a pH 7,0 (T)
-//T = SB + (H+Al)
-    public float calculo(float somaBase, float aluminio, float hidrogenio) {
-        if (somaBase != 0) {
-            calculoCTCaPH = somaBase + (hidrogenio + aluminio);
-
-        } else {
-            mensagem = "Por favor inclua o valor da base";
-        }
-        return 0;
-    }
 }
