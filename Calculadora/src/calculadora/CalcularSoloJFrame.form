@@ -38,15 +38,13 @@
               <EmptySpace min="-2" pref="147" max="-2" attributes="0"/>
           </Group>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                      <Component id="jLabel4" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" pref="69" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" pref="69" max="-2" attributes="0"/>
-                  </Group>
-                  <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="54" pref="54" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                  <Component id="jLabel4" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Component id="jLabel3" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Component id="jLabel2" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" pref="69" max="-2" attributes="0"/>
+                  <Component id="jLabel9" min="-2" pref="69" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
@@ -67,11 +65,18 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel8" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel8" alignment="0" min="-2" pref="49" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel7" pref="68" max="32767" attributes="0"/>
+                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="52" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Component id="aluminio" pref="65" max="32767" attributes="0"/>
                           <Component id="somaBase" max="32767" attributes="0"/>
@@ -108,13 +113,11 @@
                   <Component id="aluminio" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="13" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="resultadoctc" alignment="0" min="-2" pref="17" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="magnesio" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="magnesio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultadoctc" alignment="1" min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -230,12 +233,12 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="SomaBase"/>
+        <Property name="text" type="java.lang.String" value="SomaBase:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Calculo CTC"/>
+        <Property name="text" type="java.lang.String" value="Calculo CTC:"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel10">
