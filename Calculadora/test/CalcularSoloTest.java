@@ -37,4 +37,47 @@ public class CalcularSoloTest {
        assertEquals(esperado, resultado, 0);
    }  
    
+   @Test
+   public void passandoTodosOsCamposVaziosSomaBaseEsperandoFalse(){
+       boolean esperado = false;
+       boolean resultado;
+       
+       CalcularSoloJFrame teste = new CalcularSoloJFrame();
+       
+       resultado = teste.verificaCamposCalculoSomaBase("", "", "", "");
+       assertEquals (esperado,resultado);
+   }
+   
+   @Test
+   public void passandoTodosOsCamposPreenchidosSomaBaseEsperandoTrue(){
+       boolean esperado = true;
+       boolean resultado;
+       
+       CalcularSoloJFrame teste = new CalcularSoloJFrame();
+       
+       resultado = teste.verificaCamposCalculoSomaBase("xxx", "xxx", "xxx", "xxx");
+       assertEquals (esperado,resultado);
+   }
+   @Test
+   public void passandoTodosOsCamposVaziosCalculoCTCEsperandoFalse(){
+           boolean esperado = false;
+           boolean resultado;
+           
+           CalcularSoloJFrame teste = new CalcularSoloJFrame();
+           
+           resultado = teste.verificaCamposCalculoCTC("","");
+           assertEquals (esperado, resultado);
+   
+  }
+   @Test
+      public void passandoTodosOsCamposPreenchidosCalculoCTCEsperandoTrue(){
+           boolean esperado = true;
+           boolean resultado;
+           
+           CalcularSoloJFrame teste = new CalcularSoloJFrame();
+           
+           resultado = teste.verificaCamposCalculoCTC("xxx","xxx");
+           assertEquals (esperado, resultado);
+   
+  }
 }
