@@ -59,12 +59,12 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
         aluminio = new javax.swing.JTextField();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
-        resultado = new javax.swing.JTextField();
         resultadoctc = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        somaBase = new javax.swing.JTextField();
+        resultado = new javax.swing.JLabel();
+        somaBase = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -134,12 +134,6 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
             }
         });
 
-        resultado.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultadoActionPerformed(evt);
-            }
-        });
-
         jLabel9.setText("SomaBase");
 
         jLabel7.setText("Calculo CTC");
@@ -177,7 +171,7 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
                     .addComponent(magnesio)
                     .addComponent(sodio)
                     .addComponent(calcio)
-                    .addComponent(resultado))
+                    .addComponent(resultado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -195,7 +189,7 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(resultadoctc)
                             .addComponent(aluminio, javax.swing.GroupLayout.DEFAULT_SIZE, 65, Short.MAX_VALUE)
-                            .addComponent(somaBase))
+                            .addComponent(somaBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(73, 73, 73))))
         );
         layout.setVerticalGroup(
@@ -205,12 +199,12 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(potassio)
                     .addComponent(jLabel10)
-                    .addComponent(somaBase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(somaBase, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -230,10 +224,10 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
                     .addComponent(jButton3)
                     .addComponent(jButton4))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel9)
-                    .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(12, 12, 12)
+                    .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
@@ -280,21 +274,18 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_resultadoActionPerformed
-
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         CalcularSolo calculoctc = new CalcularSolo();
         float retorno;
         
         float sb = Float.parseFloat(somaBase.getText());
         float al = Float.parseFloat(aluminio.getText());
+        retorno = calculoctc.calculoCTC(sb, al);
+        
+        
         if(sb == 0){
         resultadoctc.setText("Informe a soma base!");
         }
-        retorno = calculoctc.calculoCTC(sb, al);
-        
         resultadoctc.setText("" + retorno);
     }//GEN-LAST:event_jButton4ActionPerformed
 
@@ -356,9 +347,9 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField magnesio;
     private javax.swing.JTextField potassio;
-    private javax.swing.JTextField resultado;
+    private javax.swing.JLabel resultado;
     private javax.swing.JTextField resultadoctc;
     private javax.swing.JTextField sodio;
-    private javax.swing.JTextField somaBase;
+    private javax.swing.JLabel somaBase;
     // End of variables declaration//GEN-END:variables
 }
