@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class GessagemTest {
 
-    @Test
+@Test
     public void necessidadeDeGessagemPassandoTodosValoresInferioresAoEsperado() {
         boolean esperado = false;
         boolean resultado;
@@ -41,7 +41,40 @@ public class GessagemTest {
         resultado = calculo.necessidadeGessagem(calcio, aluminio, saturacaoaluminio);
         assertEquals(esperado, resultado);
     }
+    
+    @Test
+    public void esperavazioNoGetQuantidadeGesso(){
+        float esperado = 0;
+        float resultado;
+        
+        Gessagem calculo = new Gessagem();
+        
+        resultado = calculo.getQuantidadeDeGesso();
+        assertEquals(esperado, resultado, 0);
+    }
+    
+    @Test
+    public void esperavazioNoGetNecessidadeGessagem(){
+        float esperado = 0;
+        float resultado;
+        
+        Gessagem calculo = new Gessagem();
+        
+        resultado = calculo.getNecessidadeDeGessagem();
+        assertEquals(esperado, resultado, 0);
+    }
 
+    @Test
+    public void esperavazioNoGetMensagem(){
+        String esperado = "";
+        String resultado;
+        
+        Gessagem calculo = new Gessagem();
+        
+        resultado = calculo.getMensagem();
+        assertEquals(esperado, "");
+    }
+    
     @Test
     public void calculaEspessuraDaCamadaPassando25EsperandoResultado20() {
         float esperado = 20;
@@ -52,6 +85,28 @@ public class GessagemTest {
         resultado = calculo.calculaEspessuraDaCamada((float) 25);
         assertEquals(esperado, resultado, 0);
 
+    }
+    
+    @Test
+    public void calculaEspessuraDaCamadaPassando40EsperandoResultado30() {
+        float esperado = 30;
+        float resultado;
+
+        Gessagem calculo = new Gessagem();
+
+        resultado = calculo.calculaEspessuraDaCamada((float) 40);
+        assertEquals(esperado, resultado, 0);
+    }
+    
+    @Test
+    public void calculaEspessuraDaCamadaPassando10EsperandoResultado0() {
+        float esperado = 0;
+        float resultado;
+
+        Gessagem calculo = new Gessagem();
+
+        resultado = calculo.calculaEspessuraDaCamada((float) 10);
+        assertEquals(esperado, resultado, 0);
     }
 
     @Test
@@ -76,6 +131,42 @@ public class GessagemTest {
 
         assertEquals(esperado, resultado);
     }
+    
+    @Test
+    public void NecessidadeDeGessagemEquantidadeDeGessoPassandoParamentrosInvalidosAguardandoFalse() {
+        boolean esperado = false;
+        boolean resultado;
+
+        Gessagem calculo = new Gessagem();
+
+        resultado = calculo.NecessidadeDeGessagemEquantidadeDeGesso((float) 0.5, (float) 0.4, (float) 20, (float) 30, (float) 30, (float) 40, (float) 30);
+
+        assertEquals(esperado, resultado);
+    }
+    
+    @Test
+    public void NecessidadeDeGessagemEquantidadeDeGessoPassandoParamentrosInvalidosAguardandoFalseeProfundidadeInvalida() {
+        boolean esperado = false;
+        boolean resultado;
+
+        Gessagem calculo = new Gessagem();
+
+        resultado = calculo.NecessidadeDeGessagemEquantidadeDeGesso((float) 0.0, (float) 0.0, (float) 0, (float) 10, (float) 0, (float) 0, (float) 0);
+        assertEquals(esperado, resultado);
+    }
+    
+    @Test
+    public void GessagemPorTeorDeArgilaPassandoParametrosInvalidos() {
+        float esperado = 0;
+        float resultado;
+
+        Gessagem calculo = new Gessagem();
+
+        resultado = calculo.GessagemPorTeorDeArgila((float) 0.5, (float) 0.4, (float) 20, 1, (float) 5);
+
+        assertEquals(esperado, resultado, 0);
+    }
+
 
     @Test
     public void GessagemPorTeorDeArgilaPassandoParametrosValidosAguardando250OP1() {
@@ -111,6 +202,17 @@ public class GessagemTest {
         resultado = teste.verificaCamposCalculoArgila("", "", "", "", "");
         assertEquals(esperado, resultado);
     }
+    
+    @Test
+    public void passandoTodosOsCamposPreenchidosArgilaEsperandoTrue() {
+        boolean esperado = true;
+        boolean resultado;
+
+        GessagemJFrame teste = new GessagemJFrame();
+
+        resultado = teste.verificaCamposCalculoArgila("xxx", "xxx", "xxx", "xxx", "xxx");
+        assertEquals(esperado, resultado);
+    }
 
     @Test
     public void passandoTodosOsCamposVaziosGessagemEsperandoFalse() {
@@ -122,5 +224,15 @@ public class GessagemTest {
         resultado = teste.verificaCamposCalculoGessagem("", "", "", "", "", "", "");
          assertEquals(esperado, resultado);
     }
+    
+    @Test
+    public void passandoTodosOsCamposPreenchidosGessagemEsperandoTrue() {
+        boolean esperado = true;
+        boolean resultado;
 
+        GessagemJFrame teste = new GessagemJFrame();
+
+        resultado = teste.verificaCamposCalculoGessagem("xxx", "xxx", "xxx", "xxx", "xxx", "xxx", "xxx");
+         assertEquals(esperado, resultado);
+    }
 }
