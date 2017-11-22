@@ -30,20 +30,7 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
         aluminio.setText("");
         resultadoctc.setText("");
     }
-    public boolean verificaCamposCalculoSomaBase(String potassio, String calcio, String magnesio, String sodio) {
-        if ((potassio.equals("")) || (calcio.equals("")) || (magnesio.equals("")) || (sodio.equals(""))) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-   public boolean verificaCamposCalculoCtc(String aluminio) {
-        if ((aluminio.equals(""))) {
-            return false;
-        } else {
-            return true;
-        }
-    }
+
    
     public CalcularSoloJFrame() {
         initComponents();
@@ -231,11 +218,12 @@ public class CalcularSoloJFrame extends javax.swing.JFrame {
                     .addComponent(jLabel8)
                     .addComponent(aluminio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(magnesio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
-                    .addComponent(resultadoctc, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(resultadoctc, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel3)
+                        .addComponent(magnesio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel7)))
                 .addGap(11, 11, 11)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
