@@ -9,7 +9,7 @@ package calculadora;
 //A CTC efetiva reflete a capacidade do solo em reter cátions próximo ao valor do pH natural do solo.
 public class CalcularSolo {
 
-   private String mensagem;
+   
     
 
     //Cálculo da soma de bases (SB)
