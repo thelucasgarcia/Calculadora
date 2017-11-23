@@ -23,6 +23,7 @@ public class IndexJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Calculadora Agrônoma");
 
         btnGessagem.setText("Gessagem");
         btnGessagem.addActionListener(new java.awt.event.ActionListener() {
