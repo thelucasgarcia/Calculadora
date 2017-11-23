@@ -32,27 +32,36 @@ public class AdubagemCompostaTest {
 
     }
 
-
     @Test
-    public void testeMetodoVerificaCamposVazios(){
+    public void testeMetodoVerificaCamposVazios() {
         boolean esperado = false;
         boolean resultado;
-        
-        AdubagemCompostaJFrame calculo = new AdubagemCompostaJFrame(); 
-        
+
+        AdubagemCompostaJFrame calculo = new AdubagemCompostaJFrame();
+
         resultado = calculo.verificaCampo("", "", "");
-         assertEquals(esperado, resultado);
+        assertEquals(esperado, resultado);
     }
-    
+
     @Test
-    public void testeMetodoVerificaCamposPreenchidos(){
+    public void testeMetodoVerificaCamposPreenchidos() {
         boolean esperado = true;
         boolean resultado;
-        
-        AdubagemCompostaJFrame calculo = new AdubagemCompostaJFrame(); 
-        
+
+        AdubagemCompostaJFrame calculo = new AdubagemCompostaJFrame();
+
         resultado = calculo.verificaCampo("xx", "xx", "xx");
-         assertEquals(esperado, resultado);
+        assertEquals(esperado, resultado);
     }
+
+    @Test
+    public void limpaBotoesPQsim() {
+        boolean esperado, resultado;
+        esperado = resultado = true;
+        AdubagemCompostaJFrame calculo = new AdubagemCompostaJFrame();
+        calculo.botaoReset();
+        assertEquals(esperado, resultado);
+    }
+
 
 }
