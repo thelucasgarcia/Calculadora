@@ -12,7 +12,7 @@ public class AdubagemComposta {
         return resultado;
     }
 
-    public float divideAeBcomC(float quiloMistura, float resultado1, float porcentagemElementoAdubo) {
+    public float divideAeBcomC(float resultado1, float porcentagemElementoAdubo) {
         float resultado;
         resultado = (resultado1 / porcentagemElementoAdubo);
         return resultado;

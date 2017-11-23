@@ -177,7 +177,7 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
         //   mostra.setVisible(true);
         // this.dispose();
     }//GEN-LAST:event_jButton1MouseClicked
-
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -194,7 +194,7 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
             porcentagemElementoAdubo = (Float.parseFloat(valorDeC.getText()));
 
             resultado1 = adubagem.multiplicaAeB(quiloMistura, porcentagemElementoMistura);
-            resultado2 = adubagem.divideAeBcomC(quiloMistura, resultado1, porcentagemElementoAdubo);
+            resultado2 = adubagem.divideAeBcomC(resultado1, porcentagemElementoAdubo);
 
             campoResultado.setText("" + resultado2 + "Kg de Adubo");
 

@@ -7,7 +7,7 @@
 //e no cálculo da percentagem de saturação por Al³+.
 // SOMA DE CTC
 //A CTC efetiva reflete a capacidade do solo em reter cátions próximo ao valor do pH natural do solo.
-<span class="nc" id="L10">public class CalcularSolo {</span>
+<span class="fc" id="L10">public class CalcularSolo {</span>
 
    
     
@@ -16,17 +16,17 @@
     //SB = K + Ca + Mg + (Na)
     public float calculoBase(float potassio, float calcio, float magnesio, float sodio) {
         float somaBase;
-<span class="nc" id="L19">        somaBase = (potassio + calcio + magnesio + sodio);</span>
-<span class="nc" id="L20">        return somaBase;</span>
+<span class="fc" id="L19">        somaBase = (potassio + calcio + magnesio + sodio);</span>
+<span class="fc" id="L20">        return somaBase;</span>
     }
 // Cálculo da CTC efetiva (T)
 // CTC efetiva (T) = SB + Al
 
     public float calculoCTC(float somaBase, float aluminio) {
         float somaCTC;
-<span class="nc bnc" id="L27" title="All 2 branches missed.">            if(somaBase &gt; 0){</span>
-<span class="nc" id="L28">            somaCTC = somaBase + aluminio;</span>
-<span class="nc" id="L29">            return somaCTC;</span>
+<span class="pc bpc" id="L27" title="1 of 2 branches missed.">            if(somaBase &gt; 0){</span>
+<span class="fc" id="L28">            somaCTC = somaBase + aluminio;</span>
+<span class="fc" id="L29">            return somaCTC;</span>
             }
             else {
 <span class="nc" id="L32">                return 0;</span>
