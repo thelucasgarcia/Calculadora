@@ -44,7 +44,7 @@ public class AdubasSimplesJFrame extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabelQA = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setToolTipText("Adubos Simples"); // NOI18N
 

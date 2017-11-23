@@ -4,7 +4,8 @@ public class Calculadora {
 
     public static void main(String[] args) {
 
-        //QUERO APRENDER COMO FAZER COMMIT :DDDDDD
+        IndexJFrame telaIndex = new IndexJFrame();
+        telaIndex.setVisible(true);
     }
 
 }

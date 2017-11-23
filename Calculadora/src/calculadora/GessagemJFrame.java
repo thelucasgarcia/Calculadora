@@ -60,7 +60,7 @@ public class GessagemJFrame extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         tfAluminio = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Calculo de gessagem");
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -396,13 +396,13 @@ public class GessagemJFrame extends javax.swing.JFrame {
     }
 
     public boolean verificaCamposCalculoArgila(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String porcentagemArgila) {
-        if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (porcentagemArgila.equals(""))) {
+        if ((calcio.equals("")) || (aluminio.equals("")) || (saturacaoAluminio.equals("")) || (profundidade.equals("")) || (porcentagemArgila.equals(""))) { 
             return false;
         } else {
             return true;
         }
     }
-
+    
     private void btnCalcularNecessidadeGessagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularNecessidadeGessagemActionPerformed
         
         Gessagem calculo = new Gessagem();
@@ -423,7 +423,8 @@ public class GessagemJFrame extends javax.swing.JFrame {
             mensagem.setText("Os campos devem ser preenchidos corretamente");
         }
     }//GEN-LAST:event_btnCalcularNecessidadeGessagemActionPerformed
-
+    
+    
     private void btnCalcularPorcentagemArgilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularPorcentagemArgilaActionPerformed
         
         Gessagem calculo = new Gessagem();
@@ -443,7 +444,7 @@ public class GessagemJFrame extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         cancelar();
     }//GEN-LAST:event_jButton1ActionPerformed
-
+    
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         cancelar();
     }//GEN-LAST:event_jButton2ActionPerformed

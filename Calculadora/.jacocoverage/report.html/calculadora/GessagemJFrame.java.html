@@ -396,57 +396,61 @@ public class GessagemJFrame extends javax.swing.JFrame {
     }
 
     public boolean verificaCamposCalculoArgila(String calcio, String aluminio, String saturacaoAluminio, String profundidade, String porcentagemArgila) {
-<span class="pc bpc" id="L399" title="4 of 10 branches missed.">        if ((calcio.equals(&quot;&quot;)) || (aluminio.equals(&quot;&quot;)) || (saturacaoAluminio.equals(&quot;&quot;)) || (profundidade.equals(&quot;&quot;)) || (porcentagemArgila.equals(&quot;&quot;))) {</span>
+<span class="pc bpc" id="L399" title="4 of 10 branches missed.">        if ((calcio.equals(&quot;&quot;)) || (aluminio.equals(&quot;&quot;)) || (saturacaoAluminio.equals(&quot;&quot;)) || (profundidade.equals(&quot;&quot;)) || (porcentagemArgila.equals(&quot;&quot;))) { </span>
 <span class="fc" id="L400">            return false;</span>
         } else {
 <span class="fc" id="L402">            return true;</span>
         }
     }
-
+    
+    //@ExcludeFromCodeCoverage
     private void btnCalcularNecessidadeGessagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularNecessidadeGessagemActionPerformed
         
-<span class="nc" id="L408">        Gessagem calculo = new Gessagem();</span>
+<span class="nc" id="L409">        Gessagem calculo = new Gessagem();</span>
 
-<span class="nc bnc" id="L410" title="All 2 branches missed.">        if (verificaCamposCalculoGessagem(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfNecessidadeCalcario.getText(), tfSuperficieGesso.getText(), tfEspessuraCamada.getText())) {</span>
-<span class="nc bnc" id="L411" title="All 2 branches missed.">            if (calculo.NecessidadeDeGessagemEquantidadeDeGesso(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), Float.parseFloat(tfProfundidade.getText()), Float.parseFloat(tfNecessidadeCalcario.getText()), Float.parseFloat(tfSuperficieGesso.getText()), Float.parseFloat(tfEspessuraCamada.getText()))) {</span>
-<span class="nc bnc" id="L412" title="All 2 branches missed.">                if (calculo.getMensagem().equals(&quot;&quot;)) {</span>
-<span class="nc" id="L413">                    cancelar();</span>
-<span class="nc" id="L414">                    necessidadeGesso.setText(&quot;A necessidade de gesso para esse solo é: &quot; + calculo.getNecessidadeDeGessagem());</span>
-<span class="nc" id="L415">                    quantidadeGesso.setText(&quot;A quantidade de gesso para esse solo é: &quot; + calculo.getQuantidadeDeGesso());</span>
+<span class="nc bnc" id="L411" title="All 2 branches missed.">        if (verificaCamposCalculoGessagem(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfNecessidadeCalcario.getText(), tfSuperficieGesso.getText(), tfEspessuraCamada.getText())) {</span>
+<span class="nc bnc" id="L412" title="All 2 branches missed.">            if (calculo.NecessidadeDeGessagemEquantidadeDeGesso(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), Float.parseFloat(tfProfundidade.getText()), Float.parseFloat(tfNecessidadeCalcario.getText()), Float.parseFloat(tfSuperficieGesso.getText()), Float.parseFloat(tfEspessuraCamada.getText()))) {</span>
+<span class="nc bnc" id="L413" title="All 2 branches missed.">                if (calculo.getMensagem().equals(&quot;&quot;)) {</span>
+<span class="nc" id="L414">                    cancelar();</span>
+<span class="nc" id="L415">                    necessidadeGesso.setText(&quot;A necessidade de gesso para esse solo é: &quot; + calculo.getNecessidadeDeGessagem());</span>
+<span class="nc" id="L416">                    quantidadeGesso.setText(&quot;A quantidade de gesso para esse solo é: &quot; + calculo.getQuantidadeDeGesso());</span>
                 } else {
-<span class="nc" id="L417">                    mensagem.setText(calculo.getMensagem());</span>
+<span class="nc" id="L418">                    mensagem.setText(calculo.getMensagem());</span>
                 }
             } else {
-<span class="nc" id="L420">                mensagem.setText(calculo.getMensagem());</span>
+<span class="nc" id="L421">                mensagem.setText(calculo.getMensagem());</span>
             }
         } else {
-<span class="nc" id="L423">            mensagem.setText(&quot;Os campos devem ser preenchidos corretamente&quot;);</span>
+<span class="nc" id="L424">            mensagem.setText(&quot;Os campos devem ser preenchidos corretamente&quot;);</span>
         }
-<span class="nc" id="L425">    }//GEN-LAST:event_btnCalcularNecessidadeGessagemActionPerformed</span>
-
+<span class="nc" id="L426">    }//GEN-LAST:event_btnCalcularNecessidadeGessagemActionPerformed</span>
+    
+    
+    //@ExcludeFromCodeCoverage
     private void btnCalcularPorcentagemArgilaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularPorcentagemArgilaActionPerformed
         
-<span class="nc" id="L429">        Gessagem calculo = new Gessagem();</span>
+<span class="nc" id="L432">        Gessagem calculo = new Gessagem();</span>
 
-<span class="nc bnc" id="L431" title="All 2 branches missed.">        if (verificaCamposCalculoArgila(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfPorcentagemArgila.getText())) {</span>
-<span class="nc bnc" id="L432" title="All 2 branches missed.">            if (culturaPerene.isSelected()) {</span>
-<span class="nc" id="L433">                necessidadeGessagemArgila.setText(&quot; Necessidade de gessagem:&quot; + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), 2, Float.parseFloat(tfPorcentagemArgila.getText())));</span>
+<span class="nc bnc" id="L434" title="All 2 branches missed.">        if (verificaCamposCalculoArgila(tfCalcio.getText(), tfAluminio.getText(), tfSaturacaoAluminio.getText(), tfProfundidade.getText(), tfPorcentagemArgila.getText())) {</span>
+<span class="nc bnc" id="L435" title="All 2 branches missed.">            if (culturaPerene.isSelected()) {</span>
+<span class="nc" id="L436">                necessidadeGessagemArgila.setText(&quot; Necessidade de gessagem:&quot; + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), 2, Float.parseFloat(tfPorcentagemArgila.getText())));</span>
             }
-<span class="nc bnc" id="L435" title="All 2 branches missed.">            if (culturaAnual.isSelected()) {</span>
-<span class="nc" id="L436">                necessidadeGessagemArgila.setText(&quot; Necessidade de gessagem:&quot; + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), 1, Float.parseFloat(tfPorcentagemArgila.getText())));</span>
+<span class="nc bnc" id="L438" title="All 2 branches missed.">            if (culturaAnual.isSelected()) {</span>
+<span class="nc" id="L439">                necessidadeGessagemArgila.setText(&quot; Necessidade de gessagem:&quot; + calculo.GessagemPorTeorDeArgila(Float.parseFloat(tfCalcio.getText()), Float.parseFloat(tfAluminio.getText()), Float.parseFloat(tfSaturacaoAluminio.getText()), 1, Float.parseFloat(tfPorcentagemArgila.getText())));</span>
             }
         } else {
-<span class="nc" id="L439">            mensagem1.setText(&quot;Os campos devem ser preenchidos corretamente&quot;);</span>
+<span class="nc" id="L442">            mensagem1.setText(&quot;Os campos devem ser preenchidos corretamente&quot;);</span>
         }
-<span class="nc" id="L441">    }//GEN-LAST:event_btnCalcularPorcentagemArgilaActionPerformed</span>
+<span class="nc" id="L444">    }//GEN-LAST:event_btnCalcularPorcentagemArgilaActionPerformed</span>
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-<span class="nc" id="L444">        cancelar();</span>
-<span class="nc" id="L445">    }//GEN-LAST:event_jButton1ActionPerformed</span>
-
+<span class="nc" id="L447">        cancelar();</span>
+<span class="nc" id="L448">    }//GEN-LAST:event_jButton1ActionPerformed</span>
+    
+    //@ExcludeFromCodeCoverage
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<span class="nc" id="L448">        cancelar();</span>
-<span class="nc" id="L449">    }//GEN-LAST:event_jButton2ActionPerformed</span>
+<span class="nc" id="L452">        cancelar();</span>
+<span class="nc" id="L453">    }//GEN-LAST:event_jButton2ActionPerformed</span>
 
     /**
      * @param args the command line arguments
@@ -458,30 +462,30 @@ public class GessagemJFrame extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L461" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L462" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L463">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L464">                    break;</span>
+<span class="nc bnc" id="L465" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L466" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L467">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L468">                    break;</span>
                 }
             }
-<span class="nc" id="L467">        } catch (ClassNotFoundException ex) {</span>
-<span class="nc" id="L468">            java.util.logging.Logger.getLogger(GessagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L469">        } catch (InstantiationException ex) {</span>
-<span class="nc" id="L470">            java.util.logging.Logger.getLogger(GessagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L471">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L471">        } catch (ClassNotFoundException ex) {</span>
 <span class="nc" id="L472">            java.util.logging.Logger.getLogger(GessagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L473">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L473">        } catch (InstantiationException ex) {</span>
 <span class="nc" id="L474">            java.util.logging.Logger.getLogger(GessagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L475">        }</span>
+<span class="nc" id="L475">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L476">            java.util.logging.Logger.getLogger(GessagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L477">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L478">            java.util.logging.Logger.getLogger(GessagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L479">        }</span>
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L479">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L483">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L481">                new GessagemJFrame().setVisible(true);</span>
-<span class="nc" id="L482">            }</span>
+<span class="nc" id="L485">                new GessagemJFrame().setVisible(true);</span>
+<span class="nc" id="L486">            }</span>
         });
-<span class="nc" id="L484">    }</span>
+<span class="nc" id="L488">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCalcularNecessidadeGessagem;
