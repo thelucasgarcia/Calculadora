@@ -371,7 +371,7 @@ public class GessagemJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_tfCalcioActionPerformed
     
-    private void cancelar(){
+    public void cancelar(){
         tfAluminio.setText("");
         tfCalcio.setText("");
         tfSaturacaoAluminio.setText("");

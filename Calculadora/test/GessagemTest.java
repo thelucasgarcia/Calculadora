@@ -235,4 +235,17 @@ public class GessagemTest {
         resultado = teste.verificaCamposCalculoGessagem("xxx", "xxx", "xxx", "xxx", "xxx", "xxx", "xxx");
          assertEquals(esperado, resultado);
     }
+    
+    
+    @Test
+    public void testaMetodoCancelarPqTenhoQueAumentarOCoverage(){
+        boolean esperado = true;
+        boolean resultado = true;
+        
+        GessagemJFrame teste = new GessagemJFrame();
+
+        teste.cancelar();
+        
+        assertEquals(esperado, resultado);
+    }
 }

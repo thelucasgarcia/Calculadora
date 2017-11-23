@@ -7,61 +7,33 @@ package calculadora;
 
 /**
  *
- * @author BMorais
+ * @author bruno
  */
-class AdubagemSimples {
-
-    private float QuantidadeRecomendada; //QR
-    private float TeorDeNutriente;          //TN
-    private float QuantidadeAplicar;        //QA
-
-<span class="nc" id="L18">    public AdubagemSimples() {</span>
-<span class="nc" id="L19">        QuantidadeRecomendada = TeorDeNutriente = 0;</span>
-
-<span class="nc" id="L21">    }</span>
-
-    public void setQuantidadeRecomendada(float QuantidadeRecomendada) {
-<span class="nc" id="L24">        this.QuantidadeRecomendada = QuantidadeRecomendada;</span>
-<span class="nc" id="L25">    }</span>
-
-    public void setTeorDeNutriente(float TeorDeNutriente) {
-<span class="nc" id="L28">        this.TeorDeNutriente = TeorDeNutriente;</span>
-<span class="nc" id="L29">    }</span>
-
-    public void setQuantidadeAplicar(float QuantidadeAplicar) {
-<span class="nc" id="L32">        this.QuantidadeAplicar = QuantidadeAplicar;</span>
-<span class="nc" id="L33">    }</span>
-
-    public float getQuantidadeRecomendada() {
-<span class="nc" id="L36">        return QuantidadeRecomendada;</span>
-    }
-
-    public float getTeorDeNutriente() {
-<span class="nc" id="L40">        return TeorDeNutriente;</span>
-    }
-
-    public float getQuantidadeAplicar() {
-<span class="nc" id="L44">        return QuantidadeAplicar;</span>
-    }
-
+<span class="fc" id="L12">public class AdubagemSimples {</span>
+    
+    /*
+Onde: 
+QA = Quantidade a aplicar               100 x QR 
+QR = Quantidade recomendada     QA = -----------------
+TN = Teor de nutriente do adubo             TN 
+ 
+Exemplo: 
+A recomendação para a adubação de Nitrogênio é 60 kg/ha. Se usarmos como fonte de N  o Sulfato de Amônio ( 20% de N) , a quantidade necessária será: 
+            100 x 60           6000 
+QA = --------------  = ----------- = 300 kg/ha 
+	20 	20 
+*/
+    
+    
     public float calculo(float QuantidadeRecomendada, float TeorDeNutriente) {
-<span class="nc" id="L48">        QuantidadeAplicar = (100 * QuantidadeRecomendada) / TeorDeNutriente;</span>
+        
+       float QuantidadeAplicar;
+<span class="fc" id="L31">        QuantidadeAplicar = (100 * QuantidadeRecomendada) / TeorDeNutriente;</span>
 
-<span class="nc" id="L50">        return QuantidadeAplicar;</span>
+<span class="fc" id="L33">        return QuantidadeAplicar;</span>
 
     }
 
-    void setQuantidadeRecomendada() {
-<span class="nc" id="L55">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
-    }
-
-    void setTeorDeNutriente() {
-<span class="nc" id="L59">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
-    }
-
-    float calculo(float parseFloat) {
-<span class="nc" id="L63">        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.</span>
-    }
-
+    
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
