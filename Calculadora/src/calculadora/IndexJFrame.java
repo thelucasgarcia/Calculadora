@@ -1,6 +1,7 @@
 
 package calculadora;
 
+import javax.swing.ImageIcon;
 /**
  *
  * @author Erick
@@ -122,7 +123,7 @@ public class IndexJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCalagemActionPerformed
 
     private void btnAdubagemSimplesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdubagemSimplesActionPerformed
-        AdubasSimplesJFrame telaAdubasSimples = new AdubasSimplesJFrame();
+        AdubagemSimplesJFrame telaAdubasSimples = new AdubagemSimplesJFrame();
         telaAdubasSimples.setVisible(true);
     }//GEN-LAST:event_btnAdubagemSimplesActionPerformed
 
