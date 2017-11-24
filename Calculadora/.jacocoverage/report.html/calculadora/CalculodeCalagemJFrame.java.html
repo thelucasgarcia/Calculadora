@@ -5,6 +5,10 @@
  */
 package calculadora;
 
+import java.awt.Component;
+import javax.swing.JInternalFrame;
+import javax.swing.JTextField;
+
 /**
  *
  * @author Lucas
@@ -14,9 +18,17 @@ public class CalculodeCalagemJFrame extends javax.swing.JFrame {
     /**
      * Creates new form CalculodeCalagemJFrame
      */
-<span class="nc" id="L17">    public CalculodeCalagemJFrame() {</span>
-<span class="nc" id="L18">        initComponents();</span>
-<span class="nc" id="L19">    }</span>
+<span class="fc" id="L21">    public CalculodeCalagemJFrame() {</span>
+<span class="fc" id="L22">       initComponents();</span>
+<span class="fc" id="L23">    }</span>
+    
+    public void LimpaTela() {     
+<span class="fc" id="L26">        capacidadeDeTrocaCationicaTF.setText(&quot;&quot;);</span>
+<span class="fc" id="L27">        ValorAtualDeSaturacaoDeBasesTF.setText(&quot;&quot;);</span>
+<span class="fc" id="L28">        ValorDesejadoDeSaturacaoDeBasesTF.setText(&quot;&quot;);</span>
+<span class="fc" id="L29">        PoderRelativoDeNeutralizacaoTotalTF.setText(&quot;&quot;);</span>
+<span class="fc" id="L30">        resultado.setText(&quot;&quot;);</span>
+<span class="fc" id="L31">    }</span>
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,137 +39,160 @@ public class CalculodeCalagemJFrame extends javax.swing.JFrame {
     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<span class="nc" id="L30">        jLabel1 = new javax.swing.JLabel();</span>
-<span class="nc" id="L31">        jLabel6 = new javax.swing.JLabel();</span>
-<span class="nc" id="L32">        capacidadeDeTrocaCationicaTF = new javax.swing.JTextField();</span>
-<span class="nc" id="L33">        ValorAtualDeSaturacaoDeBasesTF = new javax.swing.JTextField();</span>
-<span class="nc" id="L34">        ValorDesejadoDeSaturacaoDeBasesTF = new javax.swing.JTextField();</span>
-<span class="nc" id="L35">        PoderRelativoDeNeutralizacaoTotalTF = new javax.swing.JTextField();</span>
-<span class="nc" id="L36">        jLabel2 = new javax.swing.JLabel();</span>
-<span class="nc" id="L37">        jLabel3 = new javax.swing.JLabel();</span>
-<span class="nc" id="L38">        jLabel4 = new javax.swing.JLabel();</span>
-<span class="nc" id="L39">        jLabel5 = new javax.swing.JLabel();</span>
-<span class="nc" id="L40">        jButton1 = new javax.swing.JButton();</span>
-<span class="nc" id="L41">        jButton2 = new javax.swing.JButton();</span>
-<span class="nc" id="L42">        resultado = new javax.swing.JLabel();</span>
+<span class="fc" id="L42">        jLabel1 = new javax.swing.JLabel();</span>
+<span class="fc" id="L43">        jLabel6 = new javax.swing.JLabel();</span>
+<span class="fc" id="L44">        capacidadeDeTrocaCationicaTF = new javax.swing.JTextField();</span>
+<span class="fc" id="L45">        ValorAtualDeSaturacaoDeBasesTF = new javax.swing.JTextField();</span>
+<span class="fc" id="L46">        ValorDesejadoDeSaturacaoDeBasesTF = new javax.swing.JTextField();</span>
+<span class="fc" id="L47">        PoderRelativoDeNeutralizacaoTotalTF = new javax.swing.JTextField();</span>
+<span class="fc" id="L48">        jLabel2 = new javax.swing.JLabel();</span>
+<span class="fc" id="L49">        jLabel3 = new javax.swing.JLabel();</span>
+<span class="fc" id="L50">        jLabel4 = new javax.swing.JLabel();</span>
+<span class="fc" id="L51">        jLabel5 = new javax.swing.JLabel();</span>
+<span class="fc" id="L52">        limpar = new javax.swing.JButton();</span>
+<span class="fc" id="L53">        jButton2 = new javax.swing.JButton();</span>
+<span class="fc" id="L54">        JLabel = new javax.swing.JLabel();</span>
+<span class="fc" id="L55">        resultado = new javax.swing.JTextField();</span>
 
-<span class="nc" id="L44">        jLabel1.setText(&quot;jLabel1&quot;);</span>
+<span class="fc" id="L57">        jLabel1.setText(&quot;jLabel1&quot;);</span>
 
-<span class="nc" id="L46">        jLabel6.setText(&quot;jLabel6&quot;);</span>
+<span class="fc" id="L59">        jLabel6.setText(&quot;jLabel6&quot;);</span>
 
-<span class="nc" id="L48">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L61">        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);</span>
 
-<span class="nc" id="L50">        ValorAtualDeSaturacaoDeBasesTF.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L63">        ValorAtualDeSaturacaoDeBasesTF.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L52">                ValorAtualDeSaturacaoDeBasesTFActionPerformed(evt);</span>
-<span class="nc" id="L53">            }</span>
+<span class="nc" id="L65">                ValorAtualDeSaturacaoDeBasesTFActionPerformed(evt);</span>
+<span class="nc" id="L66">            }</span>
         });
 
-<span class="nc" id="L56">        PoderRelativoDeNeutralizacaoTotalTF.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L69">        PoderRelativoDeNeutralizacaoTotalTF.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L58">                PoderRelativoDeNeutralizacaoTotalTFActionPerformed(evt);</span>
-<span class="nc" id="L59">            }</span>
+<span class="nc" id="L71">                PoderRelativoDeNeutralizacaoTotalTFActionPerformed(evt);</span>
+<span class="nc" id="L72">            }</span>
         });
 
-<span class="nc" id="L62">        jLabel2.setText(&quot;Capacidade de Troca Cationica :&quot;);</span>
+<span class="fc" id="L75">        jLabel2.setText(&quot;Capacidade de Troca Cationica :&quot;);</span>
 
-<span class="nc" id="L64">        jLabel3.setText(&quot;Valor Atual de Saturação de Bases :&quot;);</span>
+<span class="fc" id="L77">        jLabel3.setText(&quot;Valor Atual de Saturação de Bases :&quot;);</span>
 
-<span class="nc" id="L66">        jLabel4.setText(&quot;Valor Desejado de Saturação de Bases :&quot;);</span>
+<span class="fc" id="L79">        jLabel4.setText(&quot;Valor Desejado de Saturação de Bases :&quot;);</span>
 
-<span class="nc" id="L68">        jLabel5.setText(&quot;Poder Relativo de Neutralização Total :&quot;);</span>
+<span class="fc" id="L81">        jLabel5.setText(&quot;Poder Relativo de Neutralização Total :&quot;);</span>
 
-<span class="nc" id="L70">        jButton1.setText(&quot;Cancelar&quot;);</span>
-
-<span class="nc" id="L72">        jButton2.setText(&quot;Calcular&quot;);</span>
-<span class="nc" id="L73">        jButton2.addActionListener(new java.awt.event.ActionListener() {</span>
+<span class="fc" id="L83">        limpar.setText(&quot;Limpar&quot;);</span>
+<span class="fc" id="L84">        limpar.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L75">                jButton2ActionPerformed(evt);</span>
-<span class="nc" id="L76">            }</span>
+<span class="nc" id="L86">                limparActionPerformed(evt);</span>
+<span class="nc" id="L87">            }</span>
         });
 
-<span class="nc" id="L79">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="nc" id="L80">        getContentPane().setLayout(layout);</span>
-<span class="nc" id="L81">        layout.setHorizontalGroup(</span>
-<span class="nc" id="L82">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L83">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L84">                .addContainerGap(91, Short.MAX_VALUE)</span>
-<span class="nc" id="L85">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L86">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()</span>
-<span class="nc" id="L87">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
-<span class="nc" id="L88">                            .addComponent(jLabel5)</span>
-<span class="nc" id="L89">                            .addComponent(jLabel4)</span>
-<span class="nc" id="L90">                            .addComponent(jLabel3)</span>
-<span class="nc" id="L91">                            .addComponent(jLabel2)</span>
-<span class="nc" id="L92">                            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L93">                                .addComponent(jButton1)</span>
-<span class="nc" id="L94">                                .addGap(18, 18, 18)</span>
-<span class="nc" id="L95">                                .addComponent(jButton2)))</span>
-<span class="nc" id="L96">                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L97">                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L98">                            .addComponent(capacidadeDeTrocaCationicaTF, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L99">                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
-<span class="nc" id="L100">                                .addComponent(ValorAtualDeSaturacaoDeBasesTF)</span>
-<span class="nc" id="L101">                                .addComponent(ValorDesejadoDeSaturacaoDeBasesTF, javax.swing.GroupLayout.Alignment.TRAILING)</span>
-<span class="nc" id="L102">                                .addComponent(PoderRelativoDeNeutralizacaoTotalTF, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)))</span>
-<span class="nc" id="L103">                        .addGap(70, 70, 70))</span>
-<span class="nc" id="L104">                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()</span>
-<span class="nc" id="L105">                        .addComponent(resultado)</span>
-<span class="nc" id="L106">                        .addGap(190, 190, 190))))</span>
+<span class="fc" id="L90">        jButton2.setText(&quot;Calcular&quot;);</span>
+<span class="fc" id="L91">        jButton2.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L93">                jButton2ActionPerformed(evt);</span>
+<span class="nc" id="L94">            }</span>
+        });
+
+<span class="fc" id="L97">        JLabel.setText(&quot;Resultado :&quot;);</span>
+
+<span class="fc" id="L99">        resultado.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));</span>
+<span class="fc" id="L100">        resultado.setEnabled(false);</span>
+<span class="fc" id="L101">        resultado.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L103">                resultadoActionPerformed(evt);</span>
+<span class="nc" id="L104">            }</span>
+        });
+
+<span class="fc" id="L107">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="fc" id="L108">        getContentPane().setLayout(layout);</span>
+<span class="fc" id="L109">        layout.setHorizontalGroup(</span>
+<span class="fc" id="L110">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L111">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L112">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="fc" id="L113">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="fc" id="L114">                    .addComponent(jLabel5)</span>
+<span class="fc" id="L115">                    .addComponent(jLabel4)</span>
+<span class="fc" id="L116">                    .addComponent(jLabel3)</span>
+<span class="fc" id="L117">                    .addComponent(jLabel2)</span>
+<span class="fc" id="L118">                    .addComponent(JLabel))</span>
+<span class="fc" id="L119">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L120">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="fc" id="L121">                    .addComponent(capacidadeDeTrocaCationicaTF, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)</span>
+<span class="fc" id="L122">                    .addComponent(ValorAtualDeSaturacaoDeBasesTF)</span>
+<span class="fc" id="L123">                    .addComponent(ValorDesejadoDeSaturacaoDeBasesTF, javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="fc" id="L124">                    .addComponent(PoderRelativoDeNeutralizacaoTotalTF, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)</span>
+<span class="fc" id="L125">                    .addComponent(resultado))</span>
+<span class="fc" id="L126">                .addGap(70, 70, 70))</span>
+<span class="fc" id="L127">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L128">                .addGap(187, 187, 187)</span>
+<span class="fc" id="L129">                .addComponent(limpar)</span>
+<span class="fc" id="L130">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L131">                .addComponent(jButton2)</span>
+<span class="fc" id="L132">                .addContainerGap(207, Short.MAX_VALUE))</span>
         );
-<span class="nc" id="L108">        layout.setVerticalGroup(</span>
-<span class="nc" id="L109">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="nc" id="L110">            .addGroup(layout.createSequentialGroup()</span>
-<span class="nc" id="L111">                .addGap(60, 60, 60)</span>
-<span class="nc" id="L112">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L113">                    .addComponent(capacidadeDeTrocaCationicaTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L114">                    .addComponent(jLabel2))</span>
-<span class="nc" id="L115">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L116">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L117">                    .addComponent(ValorAtualDeSaturacaoDeBasesTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L118">                    .addComponent(jLabel3))</span>
-<span class="nc" id="L119">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L120">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L121">                    .addComponent(ValorDesejadoDeSaturacaoDeBasesTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L122">                    .addComponent(jLabel4))</span>
-<span class="nc" id="L123">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L124">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L125">                    .addComponent(PoderRelativoDeNeutralizacaoTotalTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="nc" id="L126">                    .addComponent(jLabel5))</span>
-<span class="nc" id="L127">                .addGap(62, 62, 62)</span>
-<span class="nc" id="L128">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="nc" id="L129">                    .addComponent(jButton1)</span>
-<span class="nc" id="L130">                    .addComponent(jButton2))</span>
-<span class="nc" id="L131">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
-<span class="nc" id="L132">                .addComponent(resultado)</span>
-<span class="nc" id="L133">                .addContainerGap(31, Short.MAX_VALUE))</span>
+<span class="fc" id="L134">        layout.setVerticalGroup(</span>
+<span class="fc" id="L135">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L136">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L137">                .addGap(60, 60, 60)</span>
+<span class="fc" id="L138">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L139">                    .addComponent(capacidadeDeTrocaCationicaTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L140">                    .addComponent(jLabel2))</span>
+<span class="fc" id="L141">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L142">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L143">                    .addComponent(ValorAtualDeSaturacaoDeBasesTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L144">                    .addComponent(jLabel3))</span>
+<span class="fc" id="L145">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L146">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L147">                    .addComponent(ValorDesejadoDeSaturacaoDeBasesTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L148">                    .addComponent(jLabel4))</span>
+<span class="fc" id="L149">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)</span>
+<span class="fc" id="L150">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L151">                    .addComponent(PoderRelativoDeNeutralizacaoTotalTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L152">                    .addComponent(jLabel5))</span>
+<span class="fc" id="L153">                .addGap(18, 18, 18)</span>
+<span class="fc" id="L154">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L155">                    .addComponent(JLabel)</span>
+<span class="fc" id="L156">                    .addComponent(resultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L157">                .addGap(40, 40, 40)</span>
+<span class="fc" id="L158">                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L159">                    .addComponent(jButton2)</span>
+<span class="fc" id="L160">                    .addComponent(limpar))</span>
+<span class="fc" id="L161">                .addContainerGap(43, Short.MAX_VALUE))</span>
         );
 
-<span class="nc" id="L136">        pack();</span>
-<span class="nc" id="L137">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
-
-    private void ValorAtualDeSaturacaoDeBasesTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValorAtualDeSaturacaoDeBasesTFActionPerformed
-        // TODO add your handling code here:
-<span class="nc" id="L141">    }//GEN-LAST:event_ValorAtualDeSaturacaoDeBasesTFActionPerformed</span>
+<span class="fc" id="L164">        pack();</span>
+<span class="fc" id="L165">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void PoderRelativoDeNeutralizacaoTotalTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PoderRelativoDeNeutralizacaoTotalTFActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L145">    }//GEN-LAST:event_PoderRelativoDeNeutralizacaoTotalTFActionPerformed</span>
+<span class="nc" id="L169">    }//GEN-LAST:event_PoderRelativoDeNeutralizacaoTotalTFActionPerformed</span>
+
+    private void ValorAtualDeSaturacaoDeBasesTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ValorAtualDeSaturacaoDeBasesTFActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L173">    }//GEN-LAST:event_ValorAtualDeSaturacaoDeBasesTFActionPerformed</span>
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-<span class="nc" id="L148">        CalculodeCalagem calculo = new CalculodeCalagem();</span>
+<span class="nc" id="L176">        CalculodeCalagem calculo = new CalculodeCalagem();</span>
         float retorno;
-        
-<span class="nc" id="L151">        float CTC = Float.parseFloat(capacidadeDeTrocaCationicaTF.getText());</span>
-<span class="nc" id="L152">        float V1 = Float.parseFloat(ValorAtualDeSaturacaoDeBasesTF.getText());</span>
-<span class="nc" id="L153">        float V2 = Float.parseFloat(ValorDesejadoDeSaturacaoDeBasesTF.getText());</span>
-<span class="nc" id="L154">        float PRNT = Float.parseFloat(PoderRelativoDeNeutralizacaoTotalTF.getText());</span>
-<span class="nc" id="L155">        retorno = calculo.NecessidadeDeCalagem((int)CTC,V1,V2,PRNT);</span>
-        
-<span class="nc" id="L157">        resultado.setText(&quot;&quot; + retorno);</span>
-        
-        
-<span class="nc" id="L160">    }//GEN-LAST:event_jButton2ActionPerformed</span>
+
+<span class="nc" id="L179">        float CTC = Float.parseFloat(capacidadeDeTrocaCationicaTF.getText());</span>
+<span class="nc" id="L180">        float V1 = Float.parseFloat(ValorAtualDeSaturacaoDeBasesTF.getText());</span>
+<span class="nc" id="L181">        float V2 = Float.parseFloat(ValorDesejadoDeSaturacaoDeBasesTF.getText());</span>
+<span class="nc" id="L182">        float PRNT = Float.parseFloat(PoderRelativoDeNeutralizacaoTotalTF.getText());</span>
+<span class="nc" id="L183">        retorno = calculo.NecessidadeDeCalagem((int)CTC,V1,V2,PRNT);</span>
+
+<span class="nc" id="L185">        resultado.setText(&quot;&quot; + retorno);</span>
+
+<span class="nc" id="L187">    }//GEN-LAST:event_jButton2ActionPerformed</span>
+
+    private void resultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultadoActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L191">    }//GEN-LAST:event_resultadoActionPerformed</span>
+
+    private void limparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparActionPerformed
+<span class="nc" id="L194">        this.LimpaTela();</span>
+<span class="nc" id="L195">    }//GEN-LAST:event_limparActionPerformed</span>
 
     /**
      * @param args the command line arguments
@@ -169,37 +204,37 @@ public class CalculodeCalagemJFrame extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L172" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L173" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L174">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L175">                    break;</span>
+<span class="nc bnc" id="L207" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L208" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L209">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L210">                    break;</span>
                 }
             }
-<span class="nc" id="L178">        } catch (ClassNotFoundException ex) {</span>
-<span class="nc" id="L179">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L180">        } catch (InstantiationException ex) {</span>
-<span class="nc" id="L181">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L182">        } catch (IllegalAccessException ex) {</span>
-<span class="nc" id="L183">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L184">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
-<span class="nc" id="L185">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L186">        }</span>
+<span class="nc" id="L213">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L214">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L215">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L216">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L217">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L218">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L219">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L220">            java.util.logging.Logger.getLogger(CalculodeCalagemJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L221">        }</span>
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L190">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L225">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L192">                new CalculodeCalagemJFrame().setVisible(true);</span>
-<span class="nc" id="L193">            }</span>
+<span class="nc" id="L227">                new CalculodeCalagemJFrame().setVisible(true);</span>
+<span class="nc" id="L228">            }</span>
         });
-<span class="nc" id="L195">    }</span>
+<span class="nc" id="L230">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel JLabel;
     private javax.swing.JTextField PoderRelativoDeNeutralizacaoTotalTF;
     private javax.swing.JTextField ValorAtualDeSaturacaoDeBasesTF;
     private javax.swing.JTextField ValorDesejadoDeSaturacaoDeBasesTF;
     private javax.swing.JTextField capacidadeDeTrocaCationicaTF;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -207,7 +242,8 @@ public class CalculodeCalagemJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel resultado;
+    private javax.swing.JButton limpar;
+    private javax.swing.JTextField resultado;
     // End of variables declaration//GEN-END:variables
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>

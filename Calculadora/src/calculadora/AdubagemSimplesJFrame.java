@@ -31,6 +31,8 @@ public class AdubagemSimplesJFrame extends javax.swing.JFrame {
         } else {
             return true;
         }}
+    
+    
     public AdubagemSimplesJFrame() {
         initComponents();
     }

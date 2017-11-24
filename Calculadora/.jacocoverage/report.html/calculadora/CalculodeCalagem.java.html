@@ -28,18 +28,18 @@ Quando o PRNT não é determinado, adota-se o valor médio de 67%
 <span class="fc" id="L28">        public CalculodeCalagem(){</span>
 <span class="fc" id="L29">            this.poderRelativoDeNeutralizacaoTotal = 67;</span>
 <span class="fc" id="L30">        }</span>
-        public float NecessidadeDeCalagem(int capacidadeDeTrocaCationica,
+        public float NecessidadeDeCalagem(float capacidadeDeTrocaCationica,
                         float valorAtualDeSaturacaoDeBases,
                         float valorDesejadoDeSaturacaoDeBases,
                         float poderRelativoDeNeutralizacaoTotal){
             
             float necessidadeDeCalagem;
             
-<span class="pc bpc" id="L38" title="1 of 2 branches missed.">            if (poderRelativoDeNeutralizacaoTotal == 0) {</span>
-<span class="nc" id="L39">                poderRelativoDeNeutralizacaoTotal = this.poderRelativoDeNeutralizacaoTotal;</span>
+<span class="fc bfc" id="L38" title="All 2 branches covered.">            if (poderRelativoDeNeutralizacaoTotal == 0) {</span>
+<span class="fc" id="L39">                poderRelativoDeNeutralizacaoTotal = this.poderRelativoDeNeutralizacaoTotal;</span>
             }
             
-<span class="fc" id="L42">            necessidadeDeCalagem = capacidadeDeTrocaCationica*(valorDesejadoDeSaturacaoDeBases - valorAtualDeSaturacaoDeBases)/( 10 * poderRelativoDeNeutralizacaoTotal);</span>
+<span class="fc" id="L42">            necessidadeDeCalagem = capacidadeDeTrocaCationica * (valorDesejadoDeSaturacaoDeBases - valorAtualDeSaturacaoDeBases)/( 10 * poderRelativoDeNeutralizacaoTotal);</span>
        
                     
 <span class="fc" id="L45">            return necessidadeDeCalagem;</span>

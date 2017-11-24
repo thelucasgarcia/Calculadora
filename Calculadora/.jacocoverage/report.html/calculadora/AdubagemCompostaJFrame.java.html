@@ -49,7 +49,7 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
 <span class="fc" id="L49">        valorDeC = new javax.swing.JTextField();</span>
 <span class="fc" id="L50">        jLabel1 = new javax.swing.JLabel();</span>
 
-<span class="fc" id="L52">        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L52">        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);</span>
 <span class="fc" id="L53">        setTitle(&quot;Calculo adubagem composta&quot;);</span>
 
 <span class="fc" id="L55">        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));</span>
@@ -85,129 +85,148 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
 <span class="nc" id="L85">                jButton1MouseClicked(evt);</span>
 <span class="nc" id="L86">            }</span>
         });
+<span class="fc" id="L88">        jButton1.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L90">                jButton1ActionPerformed(evt);</span>
+<span class="nc" id="L91">            }</span>
+        });
 
-<span class="fc" id="L89">        jLabel1.setText(&quot;KG de adubo a usar na mistura:&quot;);</span>
+<span class="fc" id="L94">        valorDeC.addActionListener(new java.awt.event.ActionListener() {</span>
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+<span class="nc" id="L96">                valorDeCActionPerformed(evt);</span>
+<span class="nc" id="L97">            }</span>
+        });
 
-<span class="fc" id="L91">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
-<span class="fc" id="L92">        jPanel1.setLayout(jPanel1Layout);</span>
-<span class="fc" id="L93">        jPanel1Layout.setHorizontalGroup(</span>
-<span class="fc" id="L94">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L95">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L96">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L97">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L98">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L99">                            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L100">                                .addContainerGap()</span>
-<span class="fc" id="L101">                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L102">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="fc" id="L103">                                .addComponent(campoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="fc" id="L104">                            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L105">                                .addGap(47, 47, 47)</span>
-<span class="fc" id="L106">                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)</span>
-<span class="fc" id="L107">                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="fc" id="L108">                                    .addComponent(jLabel3)</span>
-<span class="fc" id="L109">                                    .addComponent(jLabel4))</span>
-<span class="fc" id="L110">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="fc" id="L111">                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
-<span class="fc" id="L112">                                    .addComponent(valorDeA)</span>
-<span class="fc" id="L113">                                    .addComponent(valorDeB)</span>
-<span class="fc" id="L114">                                    .addComponent(valorDeC, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))</span>
-<span class="fc" id="L115">                        .addGap(0, 10, Short.MAX_VALUE))</span>
-<span class="fc" id="L116">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L117">                        .addContainerGap()</span>
-<span class="fc" id="L118">                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="fc" id="L119">                        .addGap(18, 18, 18)</span>
-<span class="fc" id="L120">                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))</span>
-<span class="fc" id="L121">                .addContainerGap())</span>
-<span class="fc" id="L122">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L123">                .addGap(157, 157, 157)</span>
-<span class="fc" id="L124">                .addComponent(jButton1)</span>
-<span class="fc" id="L125">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
-        );
-<span class="fc" id="L127">        jPanel1Layout.setVerticalGroup(</span>
-<span class="fc" id="L128">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L129">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
-<span class="fc" id="L130">                .addGap(19, 19, 19)</span>
-<span class="fc" id="L131">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="fc" id="L132">                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L133">                    .addComponent(valorDeA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="fc" id="L134">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
-<span class="fc" id="L135">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="fc" id="L136">                    .addComponent(jLabel4)</span>
-<span class="fc" id="L137">                    .addComponent(valorDeB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="fc" id="L138">                .addGap(20, 20, 20)</span>
-<span class="fc" id="L139">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="fc" id="L140">                    .addComponent(jLabel5)</span>
-<span class="fc" id="L141">                    .addComponent(valorDeC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
-<span class="fc" id="L142">                .addGap(36, 36, 36)</span>
-<span class="fc" id="L143">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
-<span class="fc" id="L144">                    .addComponent(jButton2)</span>
-<span class="fc" id="L145">                    .addComponent(jButton3))</span>
-<span class="fc" id="L146">                .addGap(18, 18, 18)</span>
-<span class="fc" id="L147">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
-<span class="fc" id="L148">                    .addComponent(campoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L149">                    .addComponent(jLabel1))</span>
-<span class="fc" id="L150">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)</span>
-<span class="fc" id="L151">                .addComponent(jButton1)</span>
-<span class="fc" id="L152">                .addContainerGap())</span>
-        );
+<span class="fc" id="L100">        jLabel1.setText(&quot;KG de adubo a usar na mistura:&quot;);</span>
 
-<span class="fc" id="L155">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
-<span class="fc" id="L156">        getContentPane().setLayout(layout);</span>
-<span class="fc" id="L157">        layout.setHorizontalGroup(</span>
-<span class="fc" id="L158">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L159">            .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L160">                .addContainerGap()</span>
-<span class="fc" id="L161">                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
-<span class="fc" id="L162">                .addContainerGap())</span>
+<span class="fc" id="L102">        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);</span>
+<span class="fc" id="L103">        jPanel1.setLayout(jPanel1Layout);</span>
+<span class="fc" id="L104">        jPanel1Layout.setHorizontalGroup(</span>
+<span class="fc" id="L105">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L106">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L107">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L108">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L109">                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L110">                            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L111">                                .addContainerGap()</span>
+<span class="fc" id="L112">                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L113">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="fc" id="L114">                                .addComponent(campoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L115">                            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L116">                                .addGap(47, 47, 47)</span>
+<span class="fc" id="L117">                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)</span>
+<span class="fc" id="L118">                                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="fc" id="L119">                                    .addComponent(jLabel3)</span>
+<span class="fc" id="L120">                                    .addComponent(jLabel4))</span>
+<span class="fc" id="L121">                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="fc" id="L122">                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)</span>
+<span class="fc" id="L123">                                    .addComponent(valorDeA)</span>
+<span class="fc" id="L124">                                    .addComponent(valorDeB)</span>
+<span class="fc" id="L125">                                    .addComponent(valorDeC, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))</span>
+<span class="fc" id="L126">                        .addGap(0, 10, Short.MAX_VALUE))</span>
+<span class="fc" id="L127">                    .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L128">                        .addContainerGap()</span>
+<span class="fc" id="L129">                        .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="fc" id="L130">                        .addGap(18, 18, 18)</span>
+<span class="fc" id="L131">                        .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))</span>
+<span class="fc" id="L132">                .addContainerGap())</span>
+<span class="fc" id="L133">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L134">                .addGap(157, 157, 157)</span>
+<span class="fc" id="L135">                .addComponent(jButton1)</span>
+<span class="fc" id="L136">                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))</span>
         );
-<span class="fc" id="L164">        layout.setVerticalGroup(</span>
-<span class="fc" id="L165">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
-<span class="fc" id="L166">            .addGroup(layout.createSequentialGroup()</span>
-<span class="fc" id="L167">                .addContainerGap()</span>
-<span class="fc" id="L168">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
-<span class="fc" id="L169">                .addContainerGap(23, Short.MAX_VALUE))</span>
+<span class="fc" id="L138">        jPanel1Layout.setVerticalGroup(</span>
+<span class="fc" id="L139">            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L140">            .addGroup(jPanel1Layout.createSequentialGroup()</span>
+<span class="fc" id="L141">                .addGap(19, 19, 19)</span>
+<span class="fc" id="L142">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L143">                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L144">                    .addComponent(valorDeA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L145">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)</span>
+<span class="fc" id="L146">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L147">                    .addComponent(jLabel4)</span>
+<span class="fc" id="L148">                    .addComponent(valorDeB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L149">                .addGap(20, 20, 20)</span>
+<span class="fc" id="L150">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L151">                    .addComponent(jLabel5)</span>
+<span class="fc" id="L152">                    .addComponent(valorDeC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))</span>
+<span class="fc" id="L153">                .addGap(36, 36, 36)</span>
+<span class="fc" id="L154">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)</span>
+<span class="fc" id="L155">                    .addComponent(jButton2)</span>
+<span class="fc" id="L156">                    .addComponent(jButton3))</span>
+<span class="fc" id="L157">                .addGap(18, 18, 18)</span>
+<span class="fc" id="L158">                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)</span>
+<span class="fc" id="L159">                    .addComponent(campoResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L160">                    .addComponent(jLabel1))</span>
+<span class="fc" id="L161">                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)</span>
+<span class="fc" id="L162">                .addComponent(jButton1)</span>
+<span class="fc" id="L163">                .addContainerGap())</span>
         );
 
-<span class="fc" id="L172">        pack();</span>
-<span class="fc" id="L173">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
+<span class="fc" id="L166">        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());</span>
+<span class="fc" id="L167">        getContentPane().setLayout(layout);</span>
+<span class="fc" id="L168">        layout.setHorizontalGroup(</span>
+<span class="fc" id="L169">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L170">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L171">                .addContainerGap()</span>
+<span class="fc" id="L172">                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)</span>
+<span class="fc" id="L173">                .addContainerGap())</span>
+        );
+<span class="fc" id="L175">        layout.setVerticalGroup(</span>
+<span class="fc" id="L176">            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)</span>
+<span class="fc" id="L177">            .addGroup(layout.createSequentialGroup()</span>
+<span class="fc" id="L178">                .addContainerGap()</span>
+<span class="fc" id="L179">                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)</span>
+<span class="fc" id="L180">                .addContainerGap(23, Short.MAX_VALUE))</span>
+        );
+
+<span class="fc" id="L183">        pack();</span>
+<span class="fc" id="L184">    }// &lt;/editor-fold&gt;//GEN-END:initComponents</span>
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // Menu mostra = new Menu();
         //   mostra.setVisible(true);
         // this.dispose();
-<span class="nc" id="L179">    }//GEN-LAST:event_jButton1MouseClicked</span>
+<span class="nc" id="L190">    }//GEN-LAST:event_jButton1MouseClicked</span>
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-<span class="nc" id="L183">    }//GEN-LAST:event_jButton2ActionPerformed</span>
+<span class="nc" id="L194">    }//GEN-LAST:event_jButton2ActionPerformed</span>
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         float quiloMistura, porcentagemElementoMistura, porcentagemElementoAdubo, resultado1, resultado2;
 
-<span class="nc" id="L188">        AdubagemComposta adubagem = new AdubagemComposta();</span>
+<span class="nc" id="L199">        AdubagemComposta adubagem = new AdubagemComposta();</span>
 
-<span class="nc bnc" id="L190" title="All 2 branches missed.">        if (verificaCampo(valorDeA.getText(), valorDeB.getText(), valorDeC.getText())) {</span>
+<span class="nc bnc" id="L201" title="All 2 branches missed.">        if (verificaCampo(valorDeA.getText(), valorDeB.getText(), valorDeC.getText())) {</span>
 
-<span class="nc" id="L192">            quiloMistura = (Float.parseFloat(valorDeA.getText()));</span>
-<span class="nc" id="L193">            porcentagemElementoMistura = (Float.parseFloat(valorDeB.getText()));</span>
-<span class="nc" id="L194">            porcentagemElementoAdubo = (Float.parseFloat(valorDeC.getText()));</span>
+<span class="nc" id="L203">            quiloMistura = (Float.parseFloat(valorDeA.getText()));</span>
+<span class="nc" id="L204">            porcentagemElementoMistura = (Float.parseFloat(valorDeB.getText()));</span>
+<span class="nc" id="L205">            porcentagemElementoAdubo = (Float.parseFloat(valorDeC.getText()));</span>
 
-<span class="nc" id="L196">            resultado1 = adubagem.multiplicaAeB(quiloMistura, porcentagemElementoMistura);</span>
-<span class="nc" id="L197">            resultado2 = adubagem.divideAeBcomC(resultado1, porcentagemElementoAdubo);</span>
+<span class="nc" id="L207">            resultado1 = adubagem.multiplicaAeB(quiloMistura, porcentagemElementoMistura);</span>
+<span class="nc" id="L208">            resultado2 = adubagem.divideAeBcomC(resultado1, porcentagemElementoAdubo);</span>
 
-<span class="nc" id="L199">            campoResultado.setText(&quot;&quot; + resultado2 + &quot;Kg de Adubo&quot;);</span>
+<span class="nc" id="L210">            campoResultado.setText(&quot;&quot; + resultado2 + &quot;Kg de Adubo&quot;);</span>
 
         } else {
 
-<span class="nc" id="L203">            JOptionPane.showMessageDialog(null, &quot;Todos os campos precisam ser Preenchidos!&quot;);</span>
+<span class="nc" id="L214">            JOptionPane.showMessageDialog(null, &quot;Todos os campos precisam ser Preenchidos!&quot;);</span>
         }
 
-<span class="nc" id="L206">    }//GEN-LAST:event_jButton2MouseClicked</span>
+<span class="nc" id="L217">    }//GEN-LAST:event_jButton2MouseClicked</span>
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-<span class="nc" id="L209">        botaoReset();</span>
-<span class="nc" id="L210">    }//GEN-LAST:event_jButton3ActionPerformed</span>
+<span class="nc" id="L220">        botaoReset();</span>
+<span class="nc" id="L221">    }//GEN-LAST:event_jButton3ActionPerformed</span>
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L225">    }//GEN-LAST:event_jButton1ActionPerformed</span>
+
+    private void valorDeCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_valorDeCActionPerformed
+        // TODO add your handling code here:
+<span class="nc" id="L229">    }//GEN-LAST:event_valorDeCActionPerformed</span>
 
     /**
      * @param args the command line arguments
@@ -219,30 +238,30 @@ public class AdubagemCompostaJFrame extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L222" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L223" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L224">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L225">                    break;</span>
+<span class="nc bnc" id="L241" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="nc bnc" id="L242" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="nc" id="L243">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="nc" id="L244">                    break;</span>
                 }
             }
-<span class="nc" id="L228">        } catch (ClassNotFoundException ex) {</span>
-<span class="nc" id="L229">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L230">        } catch (InstantiationException ex) {</span>
-<span class="nc" id="L231">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L232">        } catch (IllegalAccessException ex) {</span>
-<span class="nc" id="L233">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L234">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
-<span class="nc" id="L235">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L236">        }</span>
+<span class="nc" id="L247">        } catch (ClassNotFoundException ex) {</span>
+<span class="nc" id="L248">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L249">        } catch (InstantiationException ex) {</span>
+<span class="nc" id="L250">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L251">        } catch (IllegalAccessException ex) {</span>
+<span class="nc" id="L252">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L253">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
+<span class="nc" id="L254">            java.util.logging.Logger.getLogger(AdubagemCompostaJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
+<span class="nc" id="L255">        }</span>
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L240">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="nc" id="L259">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L242">                new AdubagemCompostaJFrame().setVisible(true);</span>
-<span class="nc" id="L243">            }</span>
+<span class="nc" id="L261">                new AdubagemCompostaJFrame().setVisible(true);</span>
+<span class="nc" id="L262">            }</span>
         });
-<span class="nc" id="L245">    }</span>
+<span class="nc" id="L264">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel campoResultado;
