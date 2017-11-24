@@ -36,15 +36,15 @@ public class IndexJFrame extends javax.swing.JFrame {
 <span class="fc" id="L36">        btnAdubagemComposta.setText(&quot;Adubagem Composta&quot;);</span>
 <span class="fc" id="L37">        btnAdubagemComposta.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L39">                btnAdubagemCompostaActionPerformed(evt);</span>
-<span class="nc" id="L40">            }</span>
+<span class="fc" id="L39">                btnAdubagemCompostaActionPerformed(evt);</span>
+<span class="fc" id="L40">            }</span>
         });
 
 <span class="fc" id="L43">        btnCalagem.setText(&quot;Calagem&quot;);</span>
 <span class="fc" id="L44">        btnCalagem.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="nc" id="L46">                btnCalagemActionPerformed(evt);</span>
-<span class="nc" id="L47">            }</span>
+<span class="fc" id="L46">                btnCalagemActionPerformed(evt);</span>
+<span class="fc" id="L47">            }</span>
         });
 
 <span class="fc" id="L50">        btnAdubagemSimples.setText(&quot;Adubagem Simples&quot;);</span>
@@ -113,14 +113,14 @@ public class IndexJFrame extends javax.swing.JFrame {
 <span class="nc" id="L113">    }//GEN-LAST:event_btnGessagemActionPerformed</span>
 
     private void btnAdubagemCompostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdubagemCompostaActionPerformed
-<span class="nc" id="L116">        AdubagemCompostaJFrame telaAdubagemComposta = new AdubagemCompostaJFrame();</span>
-<span class="nc" id="L117">        telaAdubagemComposta.setVisible(true);</span>
-<span class="nc" id="L118">    }//GEN-LAST:event_btnAdubagemCompostaActionPerformed</span>
+<span class="fc" id="L116">        AdubagemCompostaJFrame telaAdubagemComposta = new AdubagemCompostaJFrame();</span>
+<span class="fc" id="L117">        telaAdubagemComposta.setVisible(true);</span>
+<span class="fc" id="L118">    }//GEN-LAST:event_btnAdubagemCompostaActionPerformed</span>
 
     private void btnCalagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalagemActionPerformed
-<span class="nc" id="L121">        CalculodeCalagemJFrame telaCalculodeCalagem = new CalculodeCalagemJFrame();</span>
-<span class="nc" id="L122">        telaCalculodeCalagem.setVisible(true);</span>
-<span class="nc" id="L123">    }//GEN-LAST:event_btnCalagemActionPerformed</span>
+<span class="fc" id="L121">        CalculodeCalagemJFrame telaCalculodeCalagem = new CalculodeCalagemJFrame();</span>
+<span class="fc" id="L122">        telaCalculodeCalagem.setVisible(true);</span>
+<span class="fc" id="L123">    }//GEN-LAST:event_btnCalagemActionPerformed</span>
 
     private void btnAdubagemSimplesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdubagemSimplesActionPerformed
 <span class="nc" id="L126">        AdubagemSimplesJFrame telaAdubasSimples = new AdubagemSimplesJFrame();</span>
@@ -135,7 +135,7 @@ public class IndexJFrame extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main() {
         /* Set the Nimbus look and feel */
         //&lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Look and feel setting code (optional) &quot;&gt;
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -163,9 +163,10 @@ public class IndexJFrame extends javax.swing.JFrame {
 <span class="nc" id="L163">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
 <span class="nc" id="L165">                new IndexJFrame().setVisible(true);</span>
-<span class="nc" id="L166">            }</span>
+<span class="nc" id="L166">                boolean retorno = true;</span>
+<span class="nc" id="L167">            }</span>
         });
-<span class="nc" id="L168">    }</span>
+<span class="nc" id="L169">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdubagemComposta;
@@ -175,5 +176,6 @@ public class IndexJFrame extends javax.swing.JFrame {
     private javax.swing.JButton btnGessagem;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span></div></body></html>
