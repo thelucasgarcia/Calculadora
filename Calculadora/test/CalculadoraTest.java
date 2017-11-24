@@ -22,7 +22,7 @@ public class CalculadoraTest {
     public void testedeMain(){
         
         Calculadora teste = new Calculadora();
-        Calculadora.main();
+       // Calculadora.main();
            
     }
 
