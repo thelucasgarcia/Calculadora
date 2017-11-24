@@ -28,6 +28,13 @@ public class AdubagemSimplesTest {
         resultado = calculo.calculo(60, 30);
         assertEquals(previsto, resultado, 0.001);
     }
-    
+    @Test
+    public void limpaBotoesSim() {
+        boolean esperado, resultado;
+        esperado = resultado = true;
+        AdubagemSimplesJFrame calculo = new AdubagemSimplesJFrame();
+        calculo.botaoLimpa();
+        assertEquals(esperado, resultado);
+    }    
     
 }
