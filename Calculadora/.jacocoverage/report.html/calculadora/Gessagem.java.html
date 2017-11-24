@@ -10,88 +10,88 @@ public class Gessagem {
     private float quantidadeDeGesso; // tonelada por hectar 
     private float necessidadeDeGessagem; // Kg por hectar a ser aplicado no solo
 
-<span class="nc" id="L13">    public Gessagem() {</span>
-<span class="nc" id="L14">        necessidadeDeGessagem = quantidadeDeGesso = 0;</span>
-<span class="nc" id="L15">    }</span>
+<span class="fc" id="L13">    public Gessagem() {</span>
+<span class="fc" id="L14">        necessidadeDeGessagem = quantidadeDeGesso = 0;</span>
+<span class="fc" id="L15">    }</span>
 
 
     public float getQuantidadeDeGesso() {
-<span class="nc" id="L19">        return quantidadeDeGesso;</span>
+<span class="fc" id="L19">        return quantidadeDeGesso;</span>
     }
 
     public float getNecessidadeDeGessagem() {
-<span class="nc" id="L23">        return necessidadeDeGessagem;</span>
+<span class="fc" id="L23">        return necessidadeDeGessagem;</span>
     }
 
     public String getMensagem() {
-<span class="nc" id="L27">        return mensagem;</span>
+<span class="fc" id="L27">        return mensagem;</span>
     }
 
     public boolean verificaprofundidadeamostra(float profundidade) {
-<span class="nc bnc" id="L31" title="All 2 branches missed.">        if (profundidade &gt; 20) {</span>
-<span class="nc" id="L32">            return true;</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (profundidade &gt; 20) {</span>
+<span class="fc" id="L32">            return true;</span>
         } else {
-<span class="nc" id="L34">            return false;</span>
+<span class="fc" id="L34">            return false;</span>
         }
     }
 
     //unidade de medidas -&gt; calcio =  cmolc/dm³, aluminio = cmolc/dm³, saturacaoaluminio = %
     public boolean necessidadeGessagem(float calcio, float aluminio, float saturacaoaluminio) {
-<span class="nc bnc" id="L40" title="All 6 branches missed.">        if ((calcio &lt;= 0.4) || (aluminio &gt; 0.5) || (saturacaoaluminio &gt; 30)) {</span>
-<span class="nc" id="L41">            return true;</span>
+<span class="pc bpc" id="L40" title="2 of 6 branches missed.">        if ((calcio &lt;= 0.4) || (aluminio &gt; 0.5) || (saturacaoaluminio &gt; 30)) {</span>
+<span class="fc" id="L41">            return true;</span>
         } else {
-<span class="nc" id="L43">            return false;</span>
+<span class="fc" id="L43">            return false;</span>
         }
     }
 
     //unidade de medidas -&gt; EspessuraDaCamada = cm
     public int calculaEspessuraDaCamada(float EspessuraDaCamada) {
 
-<span class="nc bnc" id="L50" title="All 4 branches missed.">        if ((EspessuraDaCamada &lt; 40) &amp;&amp; (EspessuraDaCamada &gt; 20)) {</span>
-<span class="nc" id="L51">            return 20;</span>
+<span class="fc bfc" id="L50" title="All 4 branches covered.">        if ((EspessuraDaCamada &lt; 40) &amp;&amp; (EspessuraDaCamada &gt; 20)) {</span>
+<span class="fc" id="L51">            return 20;</span>
         } else {
-<span class="nc bnc" id="L53" title="All 4 branches missed.">            if ((EspessuraDaCamada &lt; 60) &amp;&amp; (EspessuraDaCamada &gt; 30)) {</span>
-<span class="nc" id="L54">                return 30;</span>
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">            if ((EspessuraDaCamada &lt; 60) &amp;&amp; (EspessuraDaCamada &gt; 30)) {</span>
+<span class="fc" id="L54">                return 30;</span>
             }
-<span class="nc" id="L56">            mensagem = &quot; A espessura da camada é invalida.&quot;;</span>
-<span class="nc" id="L57">            return 0;</span>
+<span class="fc" id="L56">            mensagem = &quot; A espessura da camada é invalida.&quot;;</span>
+<span class="fc" id="L57">            return 0;</span>
         }
     }
 
     public boolean NecessidadeDeGessagemEquantidadeDeGesso(float calcio, float aluminio, float saturacaoaluminio, float profundidade, float necessidadeDeCalcario, float superficieCobertaPeloGesso, float EspessuraDaCamada) {
-<span class="nc" id="L62">        mensagem = &quot;&quot;;</span>
-<span class="nc bnc" id="L63" title="All 2 branches missed.">        if (verificaprofundidadeamostra(profundidade)) {</span>
-<span class="nc bnc" id="L64" title="All 2 branches missed.">            if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)) {</span>
-<span class="nc" id="L65">                necessidadeDeGessagem = (float) (necessidadeDeCalcario * 0.3); //valor sera printado no form  </span>
-<span class="nc" id="L66">                quantidadeDeGesso = necessidadeDeGessagem * (superficieCobertaPeloGesso / 100) * (calculaEspessuraDaCamada(EspessuraDaCamada) / 20);</span>
-<span class="nc" id="L67">                return true;</span>
+<span class="fc" id="L62">        mensagem = &quot;&quot;;</span>
+<span class="fc bfc" id="L63" title="All 2 branches covered.">        if (verificaprofundidadeamostra(profundidade)) {</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">            if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)) {</span>
+<span class="fc" id="L65">                necessidadeDeGessagem = (float) (necessidadeDeCalcario * 0.3); //valor sera printado no form  </span>
+<span class="fc" id="L66">                quantidadeDeGesso = necessidadeDeGessagem * (superficieCobertaPeloGesso / 100) * (calculaEspessuraDaCamada(EspessuraDaCamada) / 20);</span>
+<span class="fc" id="L67">                return true;</span>
             } else {
-<span class="nc" id="L69">                mensagem = &quot;O solo não necessita de gessagem.&quot;;</span>
-<span class="nc" id="L70">                return false;</span>
+<span class="fc" id="L69">                mensagem = &quot;O solo não necessita de gessagem.&quot;;</span>
+<span class="fc" id="L70">                return false;</span>
             }
         } else {
-<span class="nc" id="L73">            mensagem = &quot;A profundidade da amostra é invalida. A profundidade deve ser superior a 20cm.&quot;;</span>
-<span class="nc" id="L74">            return false;</span>
+<span class="fc" id="L73">            mensagem = &quot;A profundidade da amostra é invalida. A profundidade deve ser superior a 20cm.&quot;;</span>
+<span class="fc" id="L74">            return false;</span>
         }
     }
 
     public float GessagemPorTeorDeArgila(float calcio, float aluminio, float saturacaoaluminio, int tipocultura, float argila) {
-<span class="nc bnc" id="L79" title="All 2 branches missed.">        if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)) {</span>
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (necessidadeGessagem(calcio, aluminio, saturacaoaluminio)) {</span>
             // cultura anual
-<span class="nc bnc" id="L81" title="All 2 branches missed.">            if (tipocultura == 1) {</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">            if (tipocultura == 1) {</span>
 
-<span class="nc" id="L83">                necessidadeDeGessagem = argila * 50;</span>
-<span class="nc" id="L84">                return necessidadeDeGessagem;</span>
+<span class="fc" id="L83">                necessidadeDeGessagem = argila * 50;</span>
+<span class="fc" id="L84">                return necessidadeDeGessagem;</span>
             }
             //cultura perene 
-<span class="nc bnc" id="L87" title="All 2 branches missed.">            if (tipocultura == 2) {</span>
-<span class="nc" id="L88">                necessidadeDeGessagem = argila * 75;</span>
-<span class="nc" id="L89">                return necessidadeDeGessagem;</span>
+<span class="pc bpc" id="L87" title="1 of 2 branches missed.">            if (tipocultura == 2) {</span>
+<span class="fc" id="L88">                necessidadeDeGessagem = argila * 75;</span>
+<span class="fc" id="L89">                return necessidadeDeGessagem;</span>
             }
         } else {
-<span class="nc" id="L92">            mensagem = &quot;O solo não necessita de gessagem.&quot;;</span>
+<span class="fc" id="L92">            mensagem = &quot;O solo não necessita de gessagem.&quot;;</span>
         }
-<span class="nc" id="L94">        return 0;</span>
+<span class="fc" id="L94">        return 0;</span>
     }
 
 }

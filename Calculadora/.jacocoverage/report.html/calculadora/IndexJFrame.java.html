@@ -36,15 +36,15 @@ public class IndexJFrame extends javax.swing.JFrame {
 <span class="fc" id="L36">        btnAdubagemComposta.setText(&quot;Adubagem Composta&quot;);</span>
 <span class="fc" id="L37">        btnAdubagemComposta.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="fc" id="L39">                btnAdubagemCompostaActionPerformed(evt);</span>
-<span class="fc" id="L40">            }</span>
+<span class="nc" id="L39">                btnAdubagemCompostaActionPerformed(evt);</span>
+<span class="nc" id="L40">            }</span>
         });
 
 <span class="fc" id="L43">        btnCalagem.setText(&quot;Calagem&quot;);</span>
 <span class="fc" id="L44">        btnCalagem.addActionListener(new java.awt.event.ActionListener() {</span>
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-<span class="fc" id="L46">                btnCalagemActionPerformed(evt);</span>
-<span class="fc" id="L47">            }</span>
+<span class="nc" id="L46">                btnCalagemActionPerformed(evt);</span>
+<span class="nc" id="L47">            }</span>
         });
 
 <span class="fc" id="L50">        btnAdubagemSimples.setText(&quot;Adubagem Simples&quot;);</span>
@@ -113,14 +113,14 @@ public class IndexJFrame extends javax.swing.JFrame {
 <span class="nc" id="L113">    }//GEN-LAST:event_btnGessagemActionPerformed</span>
 
     private void btnAdubagemCompostaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdubagemCompostaActionPerformed
-<span class="fc" id="L116">        AdubagemCompostaJFrame telaAdubagemComposta = new AdubagemCompostaJFrame();</span>
-<span class="fc" id="L117">        telaAdubagemComposta.setVisible(true);</span>
-<span class="fc" id="L118">    }//GEN-LAST:event_btnAdubagemCompostaActionPerformed</span>
+<span class="nc" id="L116">        AdubagemCompostaJFrame telaAdubagemComposta = new AdubagemCompostaJFrame();</span>
+<span class="nc" id="L117">        telaAdubagemComposta.setVisible(true);</span>
+<span class="nc" id="L118">    }//GEN-LAST:event_btnAdubagemCompostaActionPerformed</span>
 
     private void btnCalagemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalagemActionPerformed
-<span class="fc" id="L121">        CalculodeCalagemJFrame telaCalculodeCalagem = new CalculodeCalagemJFrame();</span>
-<span class="fc" id="L122">        telaCalculodeCalagem.setVisible(true);</span>
-<span class="fc" id="L123">    }//GEN-LAST:event_btnCalagemActionPerformed</span>
+<span class="nc" id="L121">        CalculodeCalagemJFrame telaCalculodeCalagem = new CalculodeCalagemJFrame();</span>
+<span class="nc" id="L122">        telaCalculodeCalagem.setVisible(true);</span>
+<span class="nc" id="L123">    }//GEN-LAST:event_btnCalagemActionPerformed</span>
 
     private void btnAdubagemSimplesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdubagemSimplesActionPerformed
 <span class="nc" id="L126">        AdubagemSimplesJFrame telaAdubasSimples = new AdubagemSimplesJFrame();</span>
@@ -142,10 +142,10 @@ public class IndexJFrame extends javax.swing.JFrame {
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
         try {
-<span class="nc bnc" id="L145" title="All 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
-<span class="nc bnc" id="L146" title="All 2 branches missed.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
-<span class="nc" id="L147">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
-<span class="nc" id="L148">                    break;</span>
+<span class="pc bpc" id="L145" title="1 of 2 branches missed.">            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {</span>
+<span class="fc bfc" id="L146" title="All 2 branches covered.">                if (&quot;Nimbus&quot;.equals(info.getName())) {</span>
+<span class="fc" id="L147">                    javax.swing.UIManager.setLookAndFeel(info.getClassName());</span>
+<span class="fc" id="L148">                    break;</span>
                 }
             }
 <span class="nc" id="L151">        } catch (ClassNotFoundException ex) {</span>
@@ -156,17 +156,17 @@ public class IndexJFrame extends javax.swing.JFrame {
 <span class="nc" id="L156">            java.util.logging.Logger.getLogger(IndexJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
 <span class="nc" id="L157">        } catch (javax.swing.UnsupportedLookAndFeelException ex) {</span>
 <span class="nc" id="L158">            java.util.logging.Logger.getLogger(IndexJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);</span>
-<span class="nc" id="L159">        }</span>
+<span class="pc" id="L159">        }</span>
         //&lt;/editor-fold&gt;
 
         /* Create and display the form */
-<span class="nc" id="L163">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
+<span class="fc" id="L163">        java.awt.EventQueue.invokeLater(new Runnable() {</span>
             public void run() {
-<span class="nc" id="L165">                new IndexJFrame().setVisible(true);</span>
-<span class="nc" id="L166">                boolean retorno = true;</span>
-<span class="nc" id="L167">            }</span>
+<span class="fc" id="L165">                new IndexJFrame().setVisible(true);</span>
+<span class="fc" id="L166">                boolean retorno = true;</span>
+<span class="fc" id="L167">            }</span>
         });
-<span class="nc" id="L169">    }</span>
+<span class="fc" id="L169">    }</span>
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdubagemComposta;
