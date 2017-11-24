@@ -222,6 +222,7 @@ public class GessagemTest {
         GessagemJFrame teste = new GessagemJFrame();
 
         resultado = teste.verificaCamposCalculoGessagem("", "", "", "", "", "", "");
+
          assertEquals(esperado, resultado);
     }
     
@@ -247,5 +248,13 @@ public class GessagemTest {
         teste.cancelar();
         
         assertEquals(esperado, resultado);
+    }
+    
+    @Test
+    public void testedeMain(){
+        
+        GessagemJFrame teste = new GessagemJFrame();
+        GessagemJFrame.main();
+           
     }
 }

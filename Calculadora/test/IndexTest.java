@@ -36,9 +36,8 @@ public class IndexTest {
     @Test
     public void testedeMain(){
         
-        IndexJFrame teste = new IndexJFrame();
-        new IndexJFrame();
+       IndexJFrame teste = new IndexJFrame();
+       IndexJFrame.main();
         
-     
     }
 }

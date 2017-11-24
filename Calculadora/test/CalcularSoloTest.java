@@ -105,4 +105,12 @@ public class CalcularSoloTest {
         assertEquals(esperado, retorno);
         
     }
+    
+    @Test
+    public void testedeMain(){
+        
+        CalcularSoloJFrame teste = new CalcularSoloJFrame();
+        CalcularSoloJFrame.main();
+           
+    }
 }
