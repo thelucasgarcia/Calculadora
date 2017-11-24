@@ -71,6 +71,14 @@ public class AdubagemSimplesTest {
         assertEquals(esperado, resultado);
     } 
     
+    @Test
+    public void testedeMain(){
+        
+        AdubagemSimplesJFrame teste = new AdubagemSimplesJFrame();
+        AdubagemSimplesJFrame.main();
+           
+    }
+    
     
     
 }
