@@ -80,4 +80,29 @@ public class CalcularSoloTest {
            assertEquals (esperado, resultado);
    
   }
+        @Test
+    public void limpaBotoesVerificaTrue() {
+        boolean esperado, resultado;
+        esperado = resultado = true;
+        CalcularSoloJFrame verificado = new CalcularSoloJFrame();
+        verificado.botaoReset();
+        assertEquals(esperado, resultado);
+    }
+    @Test
+    public void limpaBotoesDoisVerificaTrue() {
+        boolean esperado, resultado;
+        esperado = resultado = true;
+        CalcularSoloJFrame verifica2 = new CalcularSoloJFrame();
+        verifica2.botaoReset2();
+        assertEquals(esperado, resultado);
+    }
+    @Test
+    public void VerificaIfSomaBase(){
+        CalcularSolo calculo = new CalcularSolo();
+        int esperado =0;
+        
+        int retorno = (int) calculo.calculoCTC(0, 40);
+        assertEquals(esperado, retorno);
+        
+    }
 }
