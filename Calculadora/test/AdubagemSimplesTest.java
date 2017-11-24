@@ -1,5 +1,5 @@
 import calculadora.AdubagemSimples;
-import calculadora.AdubasSimplesJFrame;
+import calculadora.AdubagemSimplesJFrame;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
