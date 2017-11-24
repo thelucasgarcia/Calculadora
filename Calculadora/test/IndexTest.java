@@ -29,7 +29,16 @@ public class IndexTest {
         boolean resultado = true;
         
         IndexJFrame teste = new IndexJFrame();
-        
+        teste.main();
         assertEquals(esperado, resultado);
+    }
+    
+    @Test
+    public void testedeMain(){
+        
+        IndexJFrame teste = new IndexJFrame();
+        new IndexJFrame();
+        
+     
     }
 }

@@ -52,6 +52,14 @@ public class CalculoDeCalagemTest {
         assertEquals(esperado, resultado);
     }
     
+    @Test
+    public void testedeMain(){
+        
+        CalculodeCalagemJFrame teste = new CalculodeCalagemJFrame();
+        CalculodeCalagemJFrame.main();
+           
+    }
+    
     
 
     

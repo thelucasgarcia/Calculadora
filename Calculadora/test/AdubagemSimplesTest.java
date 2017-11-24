@@ -50,13 +50,27 @@ public class AdubagemSimplesTest {
     }
     
     @Test
-    public void verificaCamposPassandoCamposPreenchidosEsperandoTrue() {
+    public void verificaCampoNulosPrimeiroIF() {
         boolean esperado, resultado;
         esperado = resultado = true;
         AdubagemSimplesJFrame calculo = new AdubagemSimplesJFrame();
-        calculo.verificaCampo("xx","xx");
+        String jTextQR = "a";
+        String jTextTN = "a";
+        calculo.verificaCampo(jTextQR, jTextTN);
         assertEquals(esperado, resultado);
-
-    }
-
+    } 
+    
+    @Test
+    public void verificaCampoNulosSegundoElse() {
+        boolean esperado, resultado;
+        esperado = resultado = false;
+        AdubagemSimplesJFrame calculo = new AdubagemSimplesJFrame();
+        String jTextQR = "";
+        String jTextTN = "";
+        calculo.verificaCampo(jTextQR, jTextTN);
+        assertEquals(esperado, resultado);
+    } 
+    
+    
+    
 }
