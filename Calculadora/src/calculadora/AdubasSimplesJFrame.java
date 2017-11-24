@@ -6,6 +6,7 @@
 package calculadora;
 
 import calculadora.AdubagemSimples;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -13,9 +14,14 @@ import calculadora.AdubagemSimples;
  */
 public class AdubasSimplesJFrame extends javax.swing.JFrame {
 
-    /**
-     * Creates new form AdubasSimplesJFrame
-     */
+    public boolean verificaCampo(String jTextQR, String jTextTN) {
+
+        if ((jTextQR.equals("")) || (jTextTN.equals(""))) {
+            return false;
+
+        } else {
+            return true;
+        }}
     public AdubasSimplesJFrame() {
         initComponents();
     }
@@ -161,12 +167,21 @@ public class AdubasSimplesJFrame extends javax.swing.JFrame {
         AdubagemSimples calculo = new AdubagemSimples();
 
         float QuantidadeRecomendada, TeorDeNutriente, QuantidadeAplicar;
+       
+        if (verificaCampo(jTextQR.getText(), jTextTN.getText())) {
 
-        QuantidadeRecomendada = (Float.parseFloat(jTextQR.getText()));
-        TeorDeNutriente = (Float.parseFloat(jTextTN.getText()));
-        QuantidadeAplicar = calculo.calculo(QuantidadeRecomendada, TeorDeNutriente);
+             QuantidadeRecomendada = (Float.parseFloat(jTextQR.getText()));
+             TeorDeNutriente = (Float.parseFloat(jTextTN.getText()));
+             QuantidadeAplicar = calculo.calculo(QuantidadeRecomendada, TeorDeNutriente);
 
-        jLabelQA.setText("" + QuantidadeAplicar);
+                 jLabelQA.setText("" + QuantidadeAplicar);
+
+        } else {
+
+            JOptionPane.showMessageDialog(null, "Todos os campos precisam ser Preenchidos!");
+        } 
+  
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
