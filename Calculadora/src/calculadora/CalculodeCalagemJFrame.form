@@ -36,36 +36,30 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace pref="91" max="32767" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="1" attributes="0">
-                              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="capacidadeDeTrocaCationicaTF" min="-2" pref="171" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="ValorAtualDeSaturacaoDeBasesTF" max="32767" attributes="0"/>
-                              <Component id="ValorDesejadoDeSaturacaoDeBasesTF" alignment="1" max="32767" attributes="0"/>
-                              <Component id="PoderRelativoDeNeutralizacaoTotalTF" pref="171" max="32767" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Component id="resultado" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="190" max="-2" attributes="0"/>
-                  </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="1" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel" alignment="1" min="-2" max="-2" attributes="0"/>
               </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="capacidadeDeTrocaCationicaTF" pref="171" max="32767" attributes="0"/>
+                  <Component id="ValorAtualDeSaturacaoDeBasesTF" max="32767" attributes="0"/>
+                  <Component id="ValorDesejadoDeSaturacaoDeBasesTF" alignment="1" max="32767" attributes="0"/>
+                  <Component id="PoderRelativoDeNeutralizacaoTotalTF" pref="171" max="32767" attributes="0"/>
+                  <Component id="resultado" alignment="0" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="187" max="-2" attributes="0"/>
+              <Component id="limpar" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="207" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,14 +86,17 @@
                   <Component id="PoderRelativoDeNeutralizacaoTotalTF" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="JLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="resultado" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace max="-2" attributes="0"/>
-              <Component id="resultado" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="31" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="limpar" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="43" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -139,10 +136,13 @@
         <Property name="text" type="java.lang.String" value="Poder Relativo de Neutraliza&#xe7;&#xe3;o Total :"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton1">
+    <Component class="javax.swing.JButton" name="limpar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancelar"/>
+        <Property name="text" type="java.lang.String" value="Limpar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="limparActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton2">
       <Properties>
@@ -152,7 +152,21 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="resultado">
+    <Component class="javax.swing.JLabel" name="JLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Resultado :"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="resultado">
+      <Properties>
+        <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+          <Color id="Cursor Padr&#xe3;o"/>
+        </Property>
+        <Property name="enabled" type="boolean" value="false"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="resultadoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

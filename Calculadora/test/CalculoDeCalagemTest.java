@@ -13,6 +13,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 import calculadora.CalculodeCalagem;
+import calculadora.CalculodeCalagemJFrame;
 /**
  *
  * @author Lucas
@@ -30,4 +31,29 @@ public class CalculoDeCalagemTest {
         resultado = calculo.NecessidadeDeCalagem(83, 23, 70, 76);
         assertEquals(esperava, resultado, 0.01);
     }
+    @Test
+    public void verifica_se_poder_relativo_de_neutralizacao_total_e_igual_a_zero(){
+        double esperava = 5.82;
+        CalculodeCalagem calculo = new CalculodeCalagem();
+        float resultado = 0;
+        resultado = calculo.NecessidadeDeCalagem(83, 23, 70, 0);
+        assertEquals(esperava, resultado, 0.01);
+    }
+    
+    @Test
+    public void testandoMetodoLimpaTela(){
+        boolean esperado = true;
+        boolean resultado = true;
+        
+        CalculodeCalagemJFrame teste = new CalculodeCalagemJFrame();
+        
+        teste.LimpaTela();
+        
+        assertEquals(esperado, resultado);
+    }
+    
+    
+
+    
+
 }
