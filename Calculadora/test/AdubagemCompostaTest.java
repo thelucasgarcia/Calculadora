@@ -62,13 +62,6 @@ public class AdubagemCompostaTest {
         calculo.botaoReset();
         assertEquals(esperado, resultado);
     }
-    
-    @Test
-    public void testedeMain(){
-        
-        AdubagemCompostaJFrame teste = new AdubagemCompostaJFrame();
-        AdubagemCompostaJFrame.main();
-           
-    }
+
 
 }

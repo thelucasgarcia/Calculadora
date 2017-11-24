@@ -248,12 +248,4 @@ public class GessagemTest {
         
         assertEquals(esperado, resultado);
     }
-    
-    @Test
-    public void testedeMain(){
-        
-        GessagemJFrame teste = new GessagemJFrame();
-        GessagemJFrame.main();
-           
-    }
 }
