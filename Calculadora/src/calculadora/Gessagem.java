@@ -14,19 +14,7 @@ public class Gessagem {
         necessidadeDeGessagem = quantidadeDeGesso = 0;
     }
 
-    /*
-    public void setQuantidadeDeGesso(float quantidadeDeGesso) {
-        this.quantidadeDeGesso = quantidadeDeGesso;
-    }
 
-    public void setNecessidadeDeGessagem(float necessidadeDeGessagem) {
-        this.necessidadeDeGessagem = necessidadeDeGessagem;
-    }
-
-    public void setMensagem(String mensagem) {
-        this.mensagem = mensagem;
-    }
-*/
     public float getQuantidadeDeGesso() {
         return quantidadeDeGesso;
     }
